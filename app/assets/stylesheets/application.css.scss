@@ -16,3 +16,24 @@
  
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background: none;
+}
+
+.btn {
+  font-size: 1.4em;
+  padding: 10px 25px;
+  margin: 0 10px;
+}
+
+.btn-primary {
+  background-color: #ea6c5d;
+  border-color: #ea6c5d;
+}
+
+.btn-primary:hover {
+  background-color: #ea6c5d;
+  border-color: #ea6c5d;
+  opacity: 0.7;
+}

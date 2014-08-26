@@ -2,11 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.panel
-{
-	padding-bottom: 20px;
+.panel {
+	padding: 15px;
 }
-.glyph-size-lg
-{	
-	font-size: 3em;
+
+.glyph-size-lg {
+    font-size: 3em;
+}
+
+html {
+  background: url(stock-photo-26740187-slice-of-bread-with-chocolate-cream.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+//  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+//  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 45px;
+  margin-top: 40px;
+}
+
+.panel-text {
+  font-size: 1.3em;
+  margin: 25px 20px;
+}
+
+.panel-body {
+  padding: 25px 15px !important;
+  height: 310px;
 }
