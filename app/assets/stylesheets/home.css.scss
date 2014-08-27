@@ -2,16 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.panel {
-	padding: 15px;
-}
-
 .glyph-size-lg {
     font-size: 3em;
-}
-
-.glyphicon {
-  color: #555555;
 }
 
 html {
@@ -30,15 +22,14 @@ html {
   margin-top: 40px;
 }
 
+.panel {
+  padding: 25px 15px;
+  min-height: 350px;
+}
+
 .panel-text {
   font-size: 1.3em;
   margin: 25px 20px;
-  color: #555555;
-}
-
-.panel-body {
-  padding: 25px 15px !important;
-  height: 310px;
 }
 
 .panel-default {
