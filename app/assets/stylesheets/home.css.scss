@@ -7,7 +7,7 @@
 }
 
 html {
-  background: url(24530627-abstract-food-background-on-vintage-boards-with-wooden-spoon.jpg) no-repeat center center fixed;
+  background: url(home_bckgd.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -25,6 +25,7 @@ html {
 .panel {
   padding: 25px 15px;
   min-height: 350px;
+  min-width: 330px;
 }
 
 .panel-text {
@@ -33,6 +34,5 @@ html {
 }
 
 .panel-default {
-  opacity: 0.92;
+  opacity: 0.80;
 }
-
