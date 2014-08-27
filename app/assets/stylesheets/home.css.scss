@@ -10,8 +10,12 @@
     font-size: 3em;
 }
 
+.glyphicon {
+  color: #555555;
+}
+
 html {
-  background: url(stock-photo-26740187-slice-of-bread-with-chocolate-cream.jpg) no-repeat center center fixed;
+  background: url(24530627-abstract-food-background-on-vintage-boards-with-wooden-spoon.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,7 +25,7 @@ html {
 }
 
 .logo {
-  width: 150px;
+  width: 300px;
   margin-bottom: 45px;
   margin-top: 40px;
 }
@@ -29,9 +33,15 @@ html {
 .panel-text {
   font-size: 1.3em;
   margin: 25px 20px;
+  color: #555555;
 }
 
 .panel-body {
   padding: 25px 15px !important;
   height: 310px;
 }
+
+.panel-default {
+  opacity: 0.92;
+}
+
