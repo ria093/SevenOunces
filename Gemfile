@@ -41,3 +41,8 @@ gem 'spring',        group: :development
 # Use Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 
+# Use Yelp API
+# See https://github.com/Yelp/yelp-ruby
+gem 'yelp'
+
+gem 'faraday'

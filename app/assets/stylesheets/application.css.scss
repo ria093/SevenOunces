@@ -17,15 +17,73 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Make Header Sticky */
+#header_container {
+  background:#ea6c5d;
+  height:60px;
+  left:0;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index: 1;
+}
+
+#header{
+  line-height:60px;
+  margin:0 auto;
+  width:1160px;
+}
+
+
+/* header items */
+
+.logo {
+  width: 150px;
+  margin-bottom: 7px;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.nav-item a {
+  color: white;
+  font-size: 1em;
+}
+
+.nav-item a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid white;
+}
+
+/* banner that appears below navigation, not sticky */
+.banner-image {
+  background-image: url('nutella-muffin-placeholder.jpg');
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+}
+
+/* main site body */
+
 body {
   background: none;
   color: #555555;
 }
 
+/* button styles */
+
 .btn {
   font-size: 1.4em;
   padding: 10px 25px;
   margin: 0 10px;
+  color: white;
+}
+
+.btn:hover {
+  color:white;
+  opacity: 0.7;
 }
 
 .btn-primary {
@@ -36,5 +94,53 @@ body {
 .btn-primary:hover {
   background-color: #ea6c5d;
   border-color: #ea6c5d;
-  opacity: 0.7;
 }
+
+.btn-yummly-logo {
+  font-size: 0em;
+  padding: 5px 8px;
+  margin: 3px 10px 3px 3px;
+  background-color: #ea6c5d;
+  border-color: #ea6c5d;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+}
+
+.btn-yummly {
+  padding: 1px 10px;
+  margin: 10px 10px 10px 0;
+  background-color: #C4C4C4;
+  font-size: 1em;
+}
+
+
+
+/* panel styles */
+
+.panel {
+  padding: 25px 15px;
+  min-height: 350px;
+}
+
+.panel-text {
+  font-size: 1.3em;
+  margin: 25px 20px;
+}
+
+.panel-default {
+  opacity: 0.92;
+}
+
+/* general styles */
+
+.center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pull-center {
+  text-align: center;
+}
+
