@@ -20,12 +20,13 @@
 body {
   background: none;
   color: #555555;
+  font-family: helvetica;
 }
 
 .btn {
   font-size: 1.4em;
+  margin: 0 10px 20px 10px;
   padding: 10px 25px;
-  margin: 0 10px;
 }
 
 .btn-primary {
@@ -37,4 +38,29 @@ body {
   background-color: #ea6c5d;
   border-color: #ea6c5d;
   opacity: 0.7;
+}
+
+.special_input
+{
+  margin: 0 10px 20px 10px;
+  padding: 10px 5px;
+  height: 50px;
+  width: 180px;
+  border: 1px solid #CCC;
+  font-size: 1.2em;
+  vertical-align: bottom;
+}
+
+.special_alert
+{
+  background: none;
+  border: none; 
+  color: #ea6c5d; 
+  //display: none;
+  left: 10%;
+  margin: 0; 
+  padding: 0; 
+  position: absolute; 
+  right: 10%; 
+  width: 80%; 
 }

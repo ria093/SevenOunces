@@ -1,38 +1,32 @@
+<% content_for :layout_override, 'home' %>
 <div class = "container">
-    <div class = "row text-center">
-        <%= image_tag("logo_seven_ounces.png", :alt => "logo", :class => "logo") %>
-    </div>
-    <div class = "col-md-6 text-center">
-        <div class = "panel panel-default">
-            <div class = "panel-body">
-                <div class = "glyphicon glyphicon-cloud glyph-size-lg"></div>
-                <h1>I'm feeling lazy.</h1>
-                <div class="panel-text">
-                      I just need someone to make me something with Nutella. Find restaurants that serve Nutella in my area.
-                </div>
-                <form class = "form-inline" role = "form">
-                      <div class = "form-group">
-                          <input type = "text" class = "form-control" id = "zip" placeholder = "Enter zip code">
-                      </div>
-                      <button type="submit" class="btn btn-primary">
-                          Get on it!
-                      </button>
-                </form>
-            </div>
+  <div class = "row text-center">
+    <%= image_tag("logo_seven_ounces.png", :alt => "logo", :class => "logo") %>
+  </div>
+  <div class = "col-md-6 text-center">
+    <div class = "panel panel-default">
+      <div class = "panel-body">
+        <div class = "glyphicon glyphicon-cloud glyph-size-lg"></div>
+        <h1>I'm feeling lazy.</h1>
+        <div class="panel-text">
+          I just need someone to make me something with Nutella. Find restaurants that serve Nutella in my area.
         </div>
+        <%= render :partial => "shared/places_form" %>
+      </div>
     </div>
-    <div class = "col-md-6 text-center">
-        <div class = "panel panel-default">
-            <div class = "panel-body">
-                <div class = "glyphicon glyphicon-home glyph-size-lg"></div>
-                <h1>I'm feeling motivated.</h1>
-                <div class="panel-text">
-                      I just got one of those big Nutella jars. Now I just need a yummy recipe. Find something to make with Nutella.
-                </div>
-                <div class = "btn btn-primary">
-                  Let's make something!
-                </div>
-            </div>
+  </div>
+  <div class = "col-md-6 text-center">
+    <div class = "panel panel-default">
+      <div class = "panel-body">
+        <div class = "glyphicon glyphicon-home glyph-size-lg"></div>
+        <h1>I'm feeling motivated.</h1>
+        <div class="panel-text">
+          I just got one of those big Nutella jars. Now I just need a yummy recipe. Find something to make with Nutella.
         </div>
+        <div class = "btn btn-primary">
+          Let's make something!
+        </div>
+      </div>
     </div>
+  </div>
 </div>
