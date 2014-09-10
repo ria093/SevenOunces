@@ -45,3 +45,5 @@ gem 'bootstrap-sass', '~> 3.2.0'
 # See https://github.com/Yelp/yelp-ruby
 gem 'yelp', require: 'yelp'
 
+# Use to connect to yummly API
+gem 'faraday'

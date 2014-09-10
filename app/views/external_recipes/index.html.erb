@@ -1,0 +1,51 @@
+<div class="col-md-10 col-md-offset-1">
+  <div class = "row text-center">
+    <h1>I'm Feeling Motivated</h1>
+    <div class = "glyphicon glyphicon-home glyph-size-lg"></div>
+    <div class="text-center panel-text">
+      I just got one of those big Nutella jars. Now I just need a yummy recipe. Find something to make with Nutella.
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Yummly API -->
+<div class="col-md-10 col-md-offset-1">
+  <% @results.each do |result| %>
+  <div class="col-md-4">
+    <div class="col-md-12 yummly-recipe">
+            <%= image_tag result.url_sm %>
+            <div class="yummly-content">
+              <h4>
+                <%= result.name %>
+              </h4>
+              Rating:
+              <% result.rating.times do %>
+                  <div class="glyphicon glyphicon-star star-pink"></div>
+              <% end %>
+              <% ( 5 - result.rating).times do %> <div class="glyphicon glyphicon-star star-grey"></div> <% end %>
+              <div class="divider-line">|</div>
+              Time: <%= result.prep_time.to_i / 60 %> min
+              <br />
+              <div class="btn btn-yummly">
+                See the recipe <div class="btn btn-yummly-logo"><%= image_tag 'yummly-logo.png', class: 'yummly-logo' %></div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+  <!--end Yummly API -->
+
+
+
+
+
+
+
+
+
+<h3>Comments:</h3>
+<div id="comments-container"></div>
+</div>

@@ -1,0 +1,2 @@
+module ExternalRecipesHelper
+end
