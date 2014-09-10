@@ -1,0 +1,21 @@
+<%= render :partial => "shared/places_form" %>
+<div class = "col-md-8 col-md-offset-2">
+  <% if @places.error.present? %>
+    <!-- Fix this area later -->
+    <% flash.now[:notice] = @places.error.msg %>
+    <%= render :partial => "shared/standard_error" %>
+    <!-- END Fix -->
+  <% else %>
+    <% @places.each do |place| %>
+      <div class ='c1'>
+        <%= place.name  %><br />
+        <%= place.rating %><br />
+        <%= place.phone %><br />
+        <%= place.distance %><br />
+        <%= place.address %><br />
+        <%= image_tag(place.rating_img_url, :alt => "rating", :class => "") %>
+        <%= image_tag(place.img_url, :alt => "rating", :class => "") %>
+      </div> <br /><br />
+    <% end %>
+  <% end %>
+</div>

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html>
+<% if (yield :layout_override) === 'home' %>
+  <% override = true %>
+<% end %>
+<html class = <%= override ? 'home-bckgd' : '' %>>
 <head>
   <title>SevenOunces</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -7,8 +10,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <% unless override %>
+    <%= render :partial => "shared/nav" %>
+  <% end %>
+  <%= yield %>
 </body>
 </html>
