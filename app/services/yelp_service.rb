@@ -43,7 +43,7 @@ class YelpService
     if exception.is_a?(Yelp::Error::UnavailableForLocation)
       new(nil, Error.new(1, 'Uh oh! It looks like the zipcode you entered is not valid.'))
     else
-      new(nil, Error.new(0, 'Oh no! It looks like something went wrong.'))
+      new(nil, Error.new(0, exception.inspect))
     end
   end
 
@@ -66,7 +66,7 @@ class YelpService
 
   def self.filter_results(results)
     results['businesses'].select { |business| business['is_closed'] == false }.map do |place|
-      SearchResult.new(place['name'], place['rating'], place['display_phone'], place['distance'], place['location']['display_address'], place['rating_img_url_small'], place['image_url'])
+      SearchResult.new(place['name'], place['rating'], place['display_phone'], place['distance'], place['location']['display_address'], place['rating_img_url'], place['image_url'])
     end
   end
 

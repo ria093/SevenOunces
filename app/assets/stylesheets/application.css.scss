@@ -17,8 +17,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* Make Header Sticky */
-#header_container {
+/*** HEADER STYLES ***/
+
+#header-container {
   background:#ea6c5d;
   height:60px;
   left:0;
@@ -31,13 +32,14 @@
 #header{
   line-height:60px;
   margin:0 auto;
-  width:1160px;
+  width:100%;
 }
 
+#header-offset {
+  height: 60px;
+}
 
-/* header items */
-
-.logo {
+.logo-sm {
   width: 150px;
   margin-bottom: 7px;
 }
@@ -65,7 +67,7 @@
   background-repeat: no-repeat;
 }
 
-/* main site body */
+/*** MAIN SITE BODY ***/
 
 body {
   background: none;
@@ -73,7 +75,7 @@ body {
   font-family: helvetica;
 }
 
-/* button styles */
+/*** BUTTON STYLES ***/
 
 .btn {
   font-size: 1.4em;
@@ -87,12 +89,26 @@ body {
   opacity: 0.7;
 }
 
+.btn a {
+  color: white;
+}
+
+.btn a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .btn-primary {
   background-color: #ea6c5d;
   border-color: #ea6c5d;
 }
 
 .btn-primary:hover {
+  background-color: #ea6c5d;
+  border-color: #ea6c5d;
+}
+
+.btn-primary:active {
   background-color: #ea6c5d;
   border-color: #ea6c5d;
 }
@@ -148,7 +164,7 @@ body {
   font-size: 1em;
 }
 
-/* panel styles */
+/*** PANEL STYLES ***/
 
 .panel {
   padding: 25px 15px;
@@ -165,7 +181,7 @@ body {
   opacity: 0.8;
 }
 
-/* general styles */
+/*** GENERAL STYLES ***/
 
 .center {
   float: none;
@@ -176,4 +192,3 @@ body {
 .pull-center {
   text-align: center;
 }
-

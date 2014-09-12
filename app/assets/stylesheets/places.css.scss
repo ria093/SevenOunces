@@ -1,3 +1,17 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.yelp-box {
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+  box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+  height: 239px;
+}
+
+.yelp-image {
+  #width:50%;
+}

@@ -17,7 +17,7 @@
     <div class="col-md-12 yummly-recipe">
             <%= image_tag result.url_sm %>
             <div class="yummly-content">
-              <h4>
+              <h4 class="yummly-title">
                 <%= result.name %>
               </h4>
               Rating:
@@ -28,9 +28,9 @@
               <div class="divider-line">|</div>
               Time: <%= result.prep_time.to_i / 60 %> min
               <br />
-              <div class="btn btn-yummly">
-                See the recipe <div class="btn btn-yummly-logo"><%= image_tag 'yummly-logo.png', class: 'yummly-logo' %></div>
-              </div>
+              <a href="<%= result.yummly_url %>" class="btn btn-yummly" target="_blank" >
+                See the recipe <div class="btn btn-yummly-logo"><%= image_tag 'yummly-logo.png', class: 'yummly-logo'%></div>
+              </a>
             </div>
     </div>
   </div>

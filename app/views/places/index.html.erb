@@ -1,5 +1,15 @@
+<div class="col-md-10 col-md-offset-1">
+  <div class = "row text-center">
+    <h1>I'm Feeling Lazy</h1>
+    <div class = "glyphicon glyphicon-cloud glyph-size-lg"></div>
+    <div class="text-center panel-text">
+      I just need someone to make me something with Nutella. Find restaurants that serve Nutella in my area.
+    </div>
+  </div>
+</div>
+
 <%= render :partial => "shared/places_form" %>
-<div class = "col-md-8 col-md-offset-2">
+<div class = "col-md-10 col-md-offset-1">
   <% if @places.error.present? %>
     <!-- Fix this area later -->
     <% flash.now[:notice] = @places.error.msg %>
@@ -7,15 +17,23 @@
     <!-- END Fix -->
   <% else %>
     <% @places.each do |place| %>
-      <div class ='c1'>
-        <%= place.name  %><br />
-        <%= place.rating %><br />
-        <%= place.phone %><br />
-        <%= place.distance %><br />
-        <%= place.address %><br />
-        <%= image_tag(place.rating_img_url, :alt => "rating", :class => "") %>
-        <%= image_tag(place.img_url, :alt => "rating", :class => "") %>
-      </div> <br /><br />
+      <div class ='c1 col-md-4'>
+        <div class="col-md-12 yelp-box">
+          <%= image_tag(place.img_url, :alt => "rating", :class => "yelp-image") %>
+          <h4>
+            <%= place.name  %>
+          </h4>
+          <%= image_tag(place.rating_img_url, :alt => "rating", :class => "") %>
+          <%= place.rating %><br />
+          <%= place.phone %>
+          <%= place.distance %><br />
+          <%= place.address.join(', ')%> <br />
+        </div>
+      </div>
     <% end %>
   <% end %>
 </div>
+
+
+
+
