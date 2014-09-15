@@ -24,7 +24,8 @@ class Yummly
                                    _app_key: ENV['YUMMLY_APP_KEY'],
                                    q: recipe_name,
                                    maxResult: 9,
-                                   start: rand(300))
+                                   start: rand(300),
+                                   requirePictures: true)
     JSON.parse(recipes_response.body)['matches'].map do |recipe_json|
       SearchResult.new(recipe_json['recipeName'], recipe_json['rating'], recipe_json['totalTimeInSeconds'],
                        recipe_json['ingredients'], recipe_json['smallImageUrls'].try(:first), recipe_json['id'])

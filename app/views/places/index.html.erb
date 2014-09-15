@@ -18,16 +18,19 @@
   <% else %>
     <% @places.each do |place| %>
       <div class ='c1 col-md-4'>
-        <div class="col-md-12 yelp-box">
-          <%= image_tag(place.img_url, :alt => "rating", :class => "yelp-image") %>
-          <h4>
-            <%= place.name  %>
-          </h4>
-          <%= image_tag(place.rating_img_url, :alt => "rating", :class => "") %>
-          <%= place.rating %><br />
-          <%= place.phone %>
-          <%= place.distance %><br />
-          <%= place.address.join(', ')%> <br />
+        <div class="col-md-12 results-box">
+          <div class="results-image-container">
+          <%= image_tag(place.img_url, :alt => "rating", :class => "results-image") %>
+          </div>
+          <div class="results-box-content">
+            <h4 class="results-title">
+              <%= place.name  %>
+            </h4>
+            <%= image_tag(place.rating_img_url, :alt => "rating", :class => "") %>
+            <%= place.rating %> <div class="divider-line">|</div><%= place.phone %>
+            <%= place.distance %><br />
+            <%= place.address.join(', ')%> <br />
+          </div>
         </div>
       </div>
     <% end %>

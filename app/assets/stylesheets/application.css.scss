@@ -39,10 +39,42 @@
   height: 60px;
 }
 
+@mixin animation($name, $duration) {
+  -webkit-animation: $name $duration;
+  -mox-animation: $name $duration;
+  -o-animation: $name $duration;
+  animation: $name $duration;
+}
+
 .logo-sm {
   width: 150px;
-  margin-bottom: 7px;
+  margin-top: 0px;
+  @include animation(slideIn, 300ms);
 }
+
+@mixin vendor-prefix-keyframes($name, $property, $from, $to) {
+  @-o-keyframes $name {
+    from { #{$property}: $from; }
+    to { #{$property}: $to; }
+  }
+
+  @-moz-keyframes $name {
+    from { #{$property}: $from; }
+    to { #{$property}: $to; }
+  }
+
+  @-webkit-keyframes $name {
+    from { #{$property}: $from; }
+    to { #{$property}: $to; }
+  }
+
+  @keyframes $name {
+    from { #{$property}: $from; }
+    to { #{$property}: $to; }
+  }
+}
+
+@include vendor-prefix-keyframes(slideIn, margin-top, -100px, 0px);
 
 .nav-item {
   display: inline-block;
@@ -70,9 +102,13 @@
 /*** MAIN SITE BODY ***/
 
 body {
-  background: none;
+  background: #eee;
   color: #555555;
   font-family: helvetica;
+}
+
+.home-bckgd body {
+  background: none;
 }
 
 /*** BUTTON STYLES ***/
@@ -179,6 +215,46 @@ body {
 
 .panel-default {
   opacity: 0.8;
+}
+
+/*** API RESULTS ***/
+
+.results-box {
+  margin-bottom: 30px;
+  padding: 0px !important;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+  box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+}
+
+.results-box-content {
+  padding: 10px 20px;
+  background-color: #ffffff;
+}
+
+.results-image {
+  width: 100%;
+}
+
+.results-image-container {
+  max-height: 237px;
+  overflow: hidden;
+  border-bottom: 4px solid #ea6c5d;
+}
+
+.results-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.API-logo {
+  width: 17px;
+  position: absolute;
+  margin-top: 12px;
+  right: 10px;
+  opacity: 0.5;
 }
 
 /*** GENERAL STYLES ***/

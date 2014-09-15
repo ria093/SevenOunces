@@ -2,25 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.yummly-recipe {
-  margin-bottom: 30px;
-  padding: 0px !important;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
-  box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
-}
 
-.yummly-recipe img {
-  width: 100%;
-  border-bottom: 4px solid #ea6c5d;
-}
-
-.yummly-content {
-  padding: 10px;
-  background-color: #ffffff;
-}
-
-/* stars for the yummly ratings */
+/*** YUMMLY RATING STARS ***/
 .star-pink {
   color: #ea6c5d;
 }
@@ -33,21 +16,15 @@
   width: 30%;
 }
 
-/* logo for attribution on yummly API */
-.yummly-logo {
-  width: 14px;
-}
-
-/* used for a "|" divider, like on yummly recipes */
+/*** "|" DIVIDER LINE ***/
 .divider-line {
   padding-right: 8px;
   padding-left: 8px;
   display: inline-block;
 }
 
-.yummly-title {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
+.yummly-recipe-result {
+  top: 50px;
+  opacity: 0;
 }
+

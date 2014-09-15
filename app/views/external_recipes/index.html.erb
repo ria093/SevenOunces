@@ -9,43 +9,34 @@
 </div>
 
 
-
-  <!-- Yummly API -->
-<div class="col-md-10 col-md-offset-1">
-  <% @results.each do |result| %>
-  <div class="col-md-4">
-    <div class="col-md-12 yummly-recipe">
-            <%= image_tag result.url_sm %>
-            <div class="yummly-content">
-              <h4 class="yummly-title">
-                <%= result.name %>
-              </h4>
-              Rating:
-              <% result.rating.times do %>
-                  <div class="glyphicon glyphicon-star star-pink"></div>
-              <% end %>
-              <% ( 5 - result.rating).times do %> <div class="glyphicon glyphicon-star star-grey"></div> <% end %>
-              <div class="divider-line">|</div>
-              Time: <%= result.prep_time.to_i / 60 %> min
-              <br />
-              <a href="<%= result.yummly_url %>" class="btn btn-yummly" target="_blank" >
-                See the recipe <div class="btn btn-yummly-logo"><%= image_tag 'yummly-logo.png', class: 'yummly-logo'%></div>
-              </a>
+<!-- Yummly API -->
+<div class="row pull-center">
+    <div class="btn btn-primary" id="page-reloader">Make something else!</div>
+</div>
+<div><!-- Magic div. Do not touch. -->
+    <div class="col-md-10 col-md-offset-1" id="yummly-recipe-results">
+    <% @results.each do |result| %>
+        <div class="col-md-4 yummly-recipe-result">
+            <div class="col-md-12 results-box">
+                <div class="results-image-container">
+                    <%= image_tag result.url_sm, class: 'results-image' %><%= image_tag 'yummly-logo.png', class: 'API-logo'%>
+                </div>
+                <div class="results-box-content">
+                    <h4 class="results-title"><%= result.name %></h4>
+                    <% result.rating.times do %>
+                        <div class="glyphicon glyphicon-star star-pink"></div>
+                    <% end %>
+                    <% ( 5 - result.rating).times do %> <div class="glyphicon glyphicon-star star-grey"></div> <% end %>
+                    <div class="divider-line">|</div>
+                    Time: <%= result.prep_time.to_i / 60 %> min
+                    <br />
+                    <a href="<%= result.yummly_url %>" class="btn btn-yummly" target="_blank" >
+                        See the recipe
+                    </a>
+                </div>
             </div>
+        </div>
+    <% end %>
     </div>
-  </div>
-  <% end %>
 </div>
-  <!--end Yummly API -->
-
-
-
-
-
-
-
-
-
-<h3>Comments:</h3>
-<div id="comments-container"></div>
-</div>
+<!--end Yummly API -->
