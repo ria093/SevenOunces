@@ -104,7 +104,8 @@
 body {
   background: #eee;
   color: #555555;
-  font-family: helvetica;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.4em;
 }
 
 .home-bckgd body {
@@ -115,7 +116,7 @@ body {
 
 .btn {
   font-size: 1.4em;
-  margin: 0 10px 20px 10px;
+  margin: 0 15px 20px 15px;
   padding: 10px 25px;
   color: white;
 }
@@ -137,6 +138,7 @@ body {
 .btn-primary {
   background-color: #ea6c5d;
   border-color: #ea6c5d;
+  font-weight: 400;
 }
 
 .btn-primary:hover {
@@ -147,39 +149,6 @@ body {
 .btn-primary:active {
   background-color: #ea6c5d;
   border-color: #ea6c5d;
-}
-
-.buffer-left {
-  margin-left: 20px;
-}
-
-.buffer-right {
-  margin-right: 20px;
-}
-
-.special_alert
-{
-  background: none;
-  border: none; 
-  color: #ea6c5d; 
-  //display: none;
-  left: 10%;
-  margin: 0; 
-  padding: 0; 
-  position: absolute; 
-  right: 10%; 
-  width: 80%; 
-}
-
-.special_input
-{
-  margin: 0 10px 20px 10px;
-  padding: 10px 5px;
-  height: 50px;
-  width: 180px;
-  border: 1px solid #CCC;
-  font-size: 1.2em;
-  vertical-align: bottom;
 }
 
 .btn-yummly-logo {
@@ -198,6 +167,31 @@ body {
   margin: 10px 10px 10px 0;
   background-color: #C4C4C4;
   font-size: 1em;
+}
+
+.special_alert
+{
+  background: none;
+  border: none; 
+  color: #ea6c5d; 
+  //display: none;
+  left: 10%;
+  margin: 0; 
+  padding: 0; 
+  position: absolute; 
+  right: 10%; 
+  width: 80%; 
+}
+
+.special_input
+{
+  margin: 0 0 20px 10px;
+  padding: 10px 5px;
+  height: 50px;
+  width: 180px;
+  border: 1px solid #CCC;
+  font-size: 1.2em;
+  vertical-align: bottom;
 }
 
 /*** PANEL STYLES ***/
@@ -219,12 +213,21 @@ body {
 
 /*** API RESULTS ***/
 
+.API-logo {
+  width: 17px;
+  position: absolute;
+  margin-top: 12px;
+  right: 10px;
+  opacity: 0.5;
+}
+
 .results-box {
   margin-bottom: 30px;
   padding: 0px !important;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
-  box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+  border: 1px #E5E3E3 solid;
+//  -webkit-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+//  -moz-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
+//  box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
 }
 
 .results-box-content {
@@ -249,15 +252,23 @@ body {
   width: 100%;
 }
 
-.API-logo {
-  width: 17px;
-  position: absolute;
-  margin-top: 12px;
-  right: 10px;
-  opacity: 0.5;
+/*** GENERAL STYLES ***/
+
+.buffer-left {
+  margin-left: 15px;
 }
 
-/*** GENERAL STYLES ***/
+.buffer-right {
+  margin-right: 15px;
+}
+
+.buffer-top {
+  margin-top: 15px;
+}
+
+.buffer-bottom {
+  margin-bottom: 15px;
+}
 
 .center {
   float: none;
@@ -265,6 +276,22 @@ body {
   margin-right: auto;
 }
 
+h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 3em;
+}
+
+h2, h3, h4 {
+  line-height: 1.4em;
+}
+
 .pull-center {
   text-align: center;
+}
+
+.title-border {
+  border-bottom: 4px solid;
+  width: 35%;
 }

@@ -1,18 +1,16 @@
-<div class="col-md-10 col-md-offset-1">
-  <div class = "row text-center">
-    <h1>I'm Feeling Motivated</h1>
-    <div class = "glyphicon glyphicon-home glyph-size-lg"></div>
-    <div class="text-center panel-text">
-      I just got one of those big Nutella jars. Now I just need a yummy recipe. Find something to make with Nutella.
-    </div>
+<div class="col-md-10 col-md-offset-1 clearfix">
+  <div class="col-md-12">
+    <h1>I'm Feeling Motivated.</h1>
   </div>
+  <div class="col-md-7 buffer-bottom">
+      <h4>
+        I just got one of those big Nutella jars. Now I just need a yummy recipe. Find something to make with Nutella.
+      </h4>
+  </div>
+  <div class="btn btn-primary pull-right" id="page-reloader">Make something else!</div>
 </div>
 
 
-<!-- Yummly API -->
-<div class="row pull-center">
-    <div class="btn btn-primary" id="page-reloader">Make something else!</div>
-</div>
 <div><!-- Magic div. Do not touch. -->
     <div class="col-md-10 col-md-offset-1" id="yummly-recipe-results">
     <% @results.each do |result| %>

@@ -1,14 +1,17 @@
-<div class="col-md-10 col-md-offset-1">
-  <div class = "row text-center">
-    <h1>I'm Feeling Lazy</h1>
-    <div class = "glyphicon glyphicon-cloud glyph-size-lg"></div>
-    <div class="text-center panel-text">
+<div class="col-md-10 col-md-offset-1 clearfix">
+  <div class="col-md-12">
+    <h1>I'm Feeling Lazy.</h1>
+  </div>
+  <div class="col-md-7 buffer-bottom">
+    <h4>
       I just need someone to make me something with Nutella. Find restaurants that serve Nutella in my area.
-    </div>
+    </h4>
+  </div>
+  <div class="pull-right">
+    <%= render :partial => "shared/places_form" %>
   </div>
 </div>
 
-<%= render :partial => "shared/places_form" %>
 <div class = "col-md-10 col-md-offset-1">
   <% if @places.error.present? %>
     <!-- Fix this area later -->

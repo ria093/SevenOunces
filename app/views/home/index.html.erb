@@ -4,10 +4,10 @@
     <%= image_tag("logo_seven_ounces.png", :alt => "logo", :class => "logo-lg") %>
   </div>
   <div class = "col-md-6 text-center">
-    <div class = "panel panel-default buffer-right">
+    <div class = "panel panel-default buffer-right buffer-left">
       <div class = "panel-body">
         <div class = "glyphicon glyphicon-cloud glyph-size-lg"></div>
-        <h1>I'm feeling lazy.</h1>
+        <h1 class="home-title">I'm feeling lazy.</h1>
         <div class="panel-text">
           I just need someone to make me something with Nutella. Find restaurants that serve Nutella in my area.
         </div>
@@ -16,15 +16,15 @@
     </div>
   </div>
   <div class = "col-md-6 text-center">
-    <div class = "panel panel-default buffer-left">
+    <div class = "panel panel-default buffer-left buffer-right">
       <div class = "panel-body">
         <div class = "glyphicon glyphicon-home glyph-size-lg"></div>
-        <h1>I'm feeling motivated.</h1>
+        <h1 class="home-title">I'm feeling motivated.</h1>
         <div class="panel-text">
           I just got one of those big Nutella jars. Now I just need a yummy recipe. Find something to make with Nutella.
         </div>
         <div class = "btn btn-primary">
-          <%= link_to "Let's Make Something!", external_recipes_path %>
+          <%= link_to "Let's make something!", external_recipes_path %>
         </div>
       </div>
     </div>
