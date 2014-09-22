@@ -17,22 +17,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/*** COLOR VARIABLES ***/
+
+$primary-color: #ea6c5d;
+$neutral-dark: #555555;
+$neutral-light: #c4c4c4;
+$neutral-extra-light: #eeeeee;
+
+
 /*** HEADER STYLES ***/
 
 #header-container {
-  background:#ea6c5d;
-  height:60px;
-  left:0;
-  position:fixed;
-  width:100%;
-  top:0;
+  background: $primary-color;
+  left: 0;
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1;
 }
 
 #header{
-  line-height:60px;
-  margin:0 auto;
-  width:100%;
+  line-height: 3.5em;
+  margin: 0 auto;
+  width: 100%;
 }
 
 #header-offset {
@@ -78,33 +86,42 @@
 
 .nav-item {
   display: inline-block;
-  margin: 0 20px;
+  height:100%;
+  margin: 2px 20px;
 }
 
 .nav-item a {
   color: white;
   font-size: 1em;
+  height:100%;
 }
 
 .nav-item a:hover {
+  opacity:0.8;
   text-decoration: none;
-  border-bottom: 3px solid white;
 }
 
-/* banner that appears below navigation, not sticky */
+/* banner below navigation, not sticky */
 .banner-image {
   background-image: url('nutella-muffin-placeholder.jpg');
-  width: 100%;
-  height: 200px;
   background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;  
 }
 
-/*** MAIN SITE BODY ***/
+
+/*** BODY STYLES ***/
+
+html, body {
+  background: $neutral-extra-light;
+  height:100%;
+}
 
 body {
-  background: #eee;
-  color: #555555;
+  background: $neutral-extra-light;
+  color: $neutral-dark;
   font-family: 'Lato', sans-serif;
+  height:100%;
   line-height: 1.4em;
 }
 
@@ -115,10 +132,10 @@ body {
 /*** BUTTON STYLES ***/
 
 .btn {
+  color: white;
   font-size: 1.4em;
   margin: 0 15px 20px 15px;
   padding: 10px 25px;
-  color: white;
 }
 
 .btn:hover {
@@ -136,44 +153,44 @@ body {
 }
 
 .btn-primary {
-  background-color: #ea6c5d;
-  border-color: #ea6c5d;
+  background-color: $primary-color;
+  border-color: $primary-color;
   font-weight: 400;
 }
 
 .btn-primary:hover {
-  background-color: #ea6c5d;
-  border-color: #ea6c5d;
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .btn-primary:active {
-  background-color: #ea6c5d;
-  border-color: #ea6c5d;
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .btn-yummly-logo {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  display: inline-block;
   font-size: 0em;
   padding: 5px 8px;
   margin: 3px 10px 3px 3px;
-  background-color: #ea6c5d;
-  border-color: #ea6c5d;
-  width: 28px;
   height: 28px;
-  display: inline-block;
+  width: 28px;
 }
 
 .btn-yummly {
-  padding: 1px 10px;
-  margin: 10px 10px 10px 0;
-  background-color: #C4C4C4;
+  background-color: $neutral-light;
   font-size: 1em;
+  padding: 1px 10px;
+  margin: 10px 10px 10px 0; 
 }
 
 .special_alert
 {
   background: none;
   border: none; 
-  color: #ea6c5d; 
+  color: $primary-color; 
   //display: none;
   left: 10%;
   margin: 0; 
@@ -185,14 +202,16 @@ body {
 
 .special_input
 {
+  border: 1px solid $neutral-light;
   margin: 0 0 20px 10px;
   padding: 10px 5px;
   height: 50px;
   width: 180px;
-  border: 1px solid #CCC;
+  
   font-size: 1.2em;
   vertical-align: bottom;
 }
+
 
 /*** PANEL STYLES ***/
 
@@ -222,7 +241,7 @@ body {
 }
 
 .results-box {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0px !important;
   border: 1px #E5E3E3 solid;
 //  -webkit-box-shadow: 2px 2px 5px 0px rgba(82,82,82,0.16);
@@ -240,9 +259,7 @@ body {
 }
 
 .results-image-container {
-  max-height: 237px;
-  overflow: hidden;
-  border-bottom: 4px solid #ea6c5d;
+  border-bottom: 4px solid $primary-color;
 }
 
 .results-title {
@@ -251,6 +268,51 @@ body {
   overflow: hidden;
   width: 100%;
 }
+
+.results-box a {
+  text-decoration:none;
+  color:$neutral-dark;
+}
+
+.results-box a:hover {
+  color: $primary-color;
+}
+
+
+/*** MASONRY STYLES ***/
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+.masonry-outer-container {
+  -moz-column-width: 2em;
+  -webkit-column-width: 25em;
+  -moz-column-gap: 0;
+  -webkit-column-gap: 0; 
+}
+
+.masonry-outer-container > .col-md-4 {
+  display: inline-block;
+  float: none;
+  margin: 0;
+  width:  100%;
+}
+
+
+/*** FOOTER STYLES ***/
+
+#footer {
+  background: url('footer_bckgd.png') no-repeat 0 0; 
+  background-size: auto 300px; 
+  background-color: $neutral-extra-light;
+  height: 300px; 
+}
+
+.footer-item {
+  display: inline-block;
+  margin: 0 20px;
+  color: $neutral-dark;
+}
+
 
 /*** GENERAL STYLES ***/
 
@@ -276,19 +338,38 @@ body {
   margin-right: auto;
 }
 
+.pull-center {
+  text-align: center;
+}
+
+.divider-line {
+  display: inline-block;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
 h1 {
-  margin-top: 50px;
-  margin-bottom: 20px;
   font-weight: 900;
   font-size: 3em;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 h2, h3, h4 {
   line-height: 1.4em;
 }
 
-.pull-center {
-  text-align: center;
+.jumbotron {
+  color: white;
+}
+
+.jumbotron h1 {
+  font-size: 3.8em;
+}
+
+.jumbotron h3 {
+  font-size: 1.7em;
+  font-weight: 300;
 }
 
 .title-border {

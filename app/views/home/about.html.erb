@@ -1,0 +1,90 @@
+<!--
+  Images are positioned fixed, so they need be placed outside of #skrollr-body.
+  The page will use data-anchor-target to display the correct image matching the current section (.gap element).
+-->
+<%= full_display_img('img-01','#img-anchor-01') %>
+<%= half_display_img('img-02','#img-anchor-02') %>
+<%= half_display_img('img-03','#img-anchor-03') %>
+<%= half_display_img('img-04','#img-anchor-04') %>
+<%= half_display_img('img-05','#img-anchor-05') %>
+
+<div id = "skrollr-body">
+  <div id = "img-anchor-01">
+  </div>
+  <div class = "gap gap-100 jumbotron" id = "img-01">
+    <table height = 95% width = 100%>
+      <tr>
+        <td>
+        <div class = "col-md-8 col-md-offset-2">
+          <h1>Find new and exciting ways to add Nutella into your everyday life.</h1>
+        </div>
+        <div class = "col-md-6 col-md-offset-2">
+          <div >
+            <h3>Search nearby locations that serve Nutella or find a great recipe you can make at home. It's all here.</h3>
+          </div>
+        </div>
+        </td>
+      </tr>
+    </table>
+    <%= next_section('#img-anchor-02') %>
+  </div>
+
+
+  <%= content_block('img-anchor-02') do %>
+    <div class = "col-md-4 col-md-offset-1 text-left vcenter">
+      <%= image_tag 'img_nutella.png', :alt => "Nutella Jars", :class => "content-img" %>
+    </div>
+    <div class = "col-md-6 content-txt vcenter">
+      <h1>It started out with a love of food &amp; code</h1>
+      <p>
+        Just in case you’ve been living under a rock, we want you to know: Nutella is 
+        awesome! Not convinced by our sheer excitement? Here are some fun facts 
+        about Nutella:
+      </p>
+      <ul>
+        <li>Nutella is turning 50 years old in 2014.</li>
+        <li>One jar of Nutella is sold every 2.5 seconds in over 75 countries.</li>
+        <li>You could circle the world 1.4 times with the amount of Nutella sold in a year.</li>
+      </ul>
+    </div>
+    <%= next_section_alt('#img-anchor-03') %>
+  <% end %>
+  <%= half_img_block('img-02') %>
+
+
+  <%= content_block('img-anchor-03') do %>  
+    <div class = "col-md-6 col-md-offset-1 content-txt vcenter">
+      <h1>It started out with a love of food &amp; code</h1>
+      <p>
+        We had a simple problem: we wanted to ﬁnd more ways to consume Nutella.
+        We thought other people might appreciate a solution as well.
+      </p>
+    </div>
+    <div class = "col-md-4 text-right vcenter">
+      <%= image_tag 'img_bourbon.png', :alt => "Bourbon and Code", :class => "content-img" %>
+    </div>
+    <%= next_section_alt('#img-anchor-04') %>
+  <% end %>
+  <%= half_img_block('img-03') %>
+
+
+  <%= content_block('img-anchor-04') do %>  
+    Section 4
+    <%= next_section_alt('#img-anchor-05') %>
+  <% end %>
+  <%= half_img_block('img-04') %>
+
+
+  <%= content_block('img-anchor-05') do %>  
+    Section 5
+    <%= next_section_alt('#img-anchor-06') %>
+  <% end %>
+  <%= half_img_block('img-05') %>
+
+
+  <%= content_block('img-anchor-06') do %>  
+    Section 6
+    <%= next_section_alt('#img-anchor-01') %>
+  <% end %>
+
+<!-- </div> do not close div so footer is inside "skrollr-body"-->

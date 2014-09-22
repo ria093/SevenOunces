@@ -1,40 +1,43 @@
-<div class="col-md-10 col-md-offset-1 clearfix">
-  <div class="col-md-12">
-    <h1>I'm Feeling Motivated.</h1>
+<div class = "col-md-10 col-md-offset-1 clearfix">
+  <div class = "col-md-12">
+    <h1>I'm Feeling Motivated</h1>
   </div>
-  <div class="col-md-7 buffer-bottom">
-      <h4>
-        I just got one of those big Nutella jars. Now I just need a yummy recipe. Find something to make with Nutella.
-      </h4>
+  <div class = "col-md-7 buffer-bottom">
+    <h4>
+      Lucky you, you're on your way to your Nutella fix. Here are some great recipes we found for you. Get to it!
+    </h4>
   </div>
-  <div class="btn btn-primary pull-right" id="page-reloader">Make something else!</div>
+  <div class = "btn btn-primary pull-right" id="page-reloader">Make something else</div>
 </div>
-
 
 <div><!-- Magic div. Do not touch. -->
-    <div class="col-md-10 col-md-offset-1" id="yummly-recipe-results">
-    <% @results.each do |result| %>
-        <div class="col-md-4 yummly-recipe-result">
-            <div class="col-md-12 results-box">
-                <div class="results-image-container">
-                    <%= image_tag result.url_sm, class: 'results-image' %><%= image_tag 'yummly-logo.png', class: 'API-logo'%>
-                </div>
-                <div class="results-box-content">
-                    <h4 class="results-title"><%= result.name %></h4>
-                    <% result.rating.times do %>
-                        <div class="glyphicon glyphicon-star star-pink"></div>
-                    <% end %>
-                    <% ( 5 - result.rating).times do %> <div class="glyphicon glyphicon-star star-grey"></div> <% end %>
-                    <div class="divider-line">|</div>
-                    Time: <%= result.prep_time.to_i / 60 %> min
-                    <br />
-                    <a href="<%= result.yummly_url %>" class="btn btn-yummly" target="_blank" >
-                        See the recipe
-                    </a>
-                </div>
+  <div class = "col-md-10 col-md-offset-1" id="yummly-recipe-results">
+    <div class = "masonry-outer-container">
+      <% @results.each do |result| %>
+        <div class = "col-md-4 yummly-recipe-result">
+          <div class = "col-md-12 results-box">
+            <div class = "results-image-container">
+              <%= link_to result.yummly_url, target: "_blank" do %>
+                <%= image_tag result.url_sm, class: 'results-image' %>
+                <%= image_tag 'yummly-logo.png', class: 'API-logo'%>  
+              <% end %>
             </div>
+            <div class = "results-box-content">
+              <%= link_to result.yummly_url, target: "_blank" do %>
+                <h4 class = "results-title"><%= result.name %></h4>
+              <% end %>
+              <% result.rating.times do %>
+                <div class = "glyphicon glyphicon-star star-pink"></div>
+              <% end %>
+              <% ( 5 - result.rating).times do %> 
+                <div class = "glyphicon glyphicon-star star-grey"></div>
+              <% end %>
+              <div class="divider-line">|</div>
+              Time: <%= result.prep_time.to_i / 60 %> min<br />
+            </div>
+          </div>
         </div>
-    <% end %>
+      <% end %>
     </div>
+  </div>
 </div>
-<!--end Yummly API -->

@@ -15,4 +15,5 @@
 /log/*.log
 /tmp
 
+# Ignore all environmental variables.
 .env

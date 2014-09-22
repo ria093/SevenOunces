@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*** HOME PAGE STYLES ***/
+
 .logo-lg {
   width: 300px;
   margin: 40px 0;
@@ -31,3 +33,161 @@
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
+/*** ABOUT PAGE STYLES ***/
+
+.skrollr-desktop body {
+  height:100% !important;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.parallax-image-wrapper {
+  position:fixed;
+  left:0;
+  width:100%;
+  overflow:hidden;
+}
+
+.parallax-image-wrapper-50 {
+  height:50%;
+  top:-50%;
+}
+
+.parallax-image-wrapper-100 {
+  height:100%;
+  top:-100%;
+}
+
+.parallax-image {
+  display:none;
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+}
+
+.parallax-image-50 {
+  height:200%;
+  top:-50%;
+}
+
+.parallax-image-100 {
+  height:100%;
+  top:0;
+}
+
+.parallax-image.skrollable-between {
+  display:block;
+}
+
+.no-skrollr .parallax-image-wrapper {
+  display:none !important;
+}
+
+#skrollr-body {
+  height:100%;
+  overflow:visible;
+  position:relative;
+}
+
+.gap {
+  background:transparent center no-repeat;
+  background-size:cover;
+}
+
+.skrollr .gap {
+  background:transparent !important;
+}
+
+.gap-50 {
+  height:50%;
+}
+
+.gap-100 {
+  height:100%;
+}
+
+.content-bar {
+  min-height: 450px;
+  padding-top:50px;
+  padding-bottom:50px;
+  position:relative;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+.content-img{
+  margin:40px 20px;
+}
+
+.content-txt {
+  padding:0 20px 60px 20px;
+  text-align: justify;
+}
+
+.content-full {
+  height:100%;
+}
+
+#img-anchor-01 {
+  margin-top:-60px;
+}
+
+#img-01 {
+  background-image:url(about_bckgd_01.png);
+}
+
+#img-02 {
+  background-image:url(about_bckgd_02.png);
+}
+
+#img-03 {
+  background-image:url(about_bckgd_03.png);
+}
+
+#img-04 {
+  background-image:url(about_bckgd_04.png);
+}
+
+#img-05 {
+  background-image:url(about_bckgd_05.png);
+}
+
+.down-arrow, .down-arrow-alt, .up-arrow, .up-arrow-alt { 
+  cursor: pointer;
+  margin:0 auto;
+  height:40px;
+  width:50px;
+  display: block;
+  opacity:0.6;
+  position:absolute;
+  bottom:15px;
+  left:40%;
+  right:40%;
+}
+
+.down-arrow {
+  background: url(icon_down_arrow.png);
+}
+
+.down-arrow-alt {
+  background: url(icon_down_arrow_alt.png);
+}
+
+.up-arrow-alt {
+  background: url(icon_up_arrow.png);
+}
+
+.up-arrow-alt {
+  background: url(icon_up_arrow_alt.png);
+}
+

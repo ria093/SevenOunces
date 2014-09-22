@@ -9,24 +9,29 @@ class YelpService
   end
   
   class SearchResult
-    attr_accessor :name, :rating, :phone, :distance, :address, :rating_img_url, :img_url
-    def initialize(name, rating, phone, distance, address, rating_img_url, img_url)
+
+    attr_accessor :name, :rating, :phone, :address, :neighborhood, :rating_img_url, :img_url, :url
+    def initialize(name, rating, phone, address, neighborhood, rating_img_url, img_url, url)
       @name = name
       @rating = rating
       @phone = phone
-      @distance = distance
       @address = address
+      @neighborhood = neighborhood
       @rating_img_url = rating_img_url
       @img_url = img_url
+      @url = url
     end
+
   end
 
   class Error
+
     attr_accessor :code, :msg
     def initialize(code, msg)
       @code = code
       @msg = msg
     end
+
   end
 
   def each(&block)
@@ -66,8 +71,19 @@ class YelpService
 
   def self.filter_results(results)
     results['businesses'].select { |business| business['is_closed'] == false }.map do |place|
-      SearchResult.new(place['name'], place['rating'], place['display_phone'], place['distance'], place['location']['display_address'], place['rating_img_url'], place['image_url'])
+      SearchResult.new(place['name'], 
+                       place['rating'], 
+                       place['display_phone'], 
+                       place['location'], 
+                       place['location']['neighborhoods'].try(:first),
+                       place['rating_img_url'], 
+                       display_img_url(place['image_url']),
+                       place['url'])
     end
+  end
+
+  def self.display_img_url(url)
+    url.sub(/ms.jpg$/, 'l.jpg') 
   end
 
 end
