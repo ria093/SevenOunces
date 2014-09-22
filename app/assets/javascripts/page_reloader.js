@@ -19,6 +19,9 @@ $(document).ready(function(){
             results = $('#yummly-recipe-results .col-md-4', data);
             $('#yummly-recipe-results').append(results);
             showRecipes();
+
+            // Add glimmer effects to all .results-box elements on hover
+            //addGlimmer();
         });
     });
 });
