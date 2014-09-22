@@ -1,7 +1,7 @@
 <div style="position:relative; text-align:center">
 <%= form_tag "/places/", method: :get, class: 'form-inline', name: 'places_form' do -%> 
   <%= text_field_tag 'location', nil, class: 'special_input required', :minlength => "3", :maxlength => "60", placeholder: 'Enter zip code' %>
-  <%= submit_tag "Get on it!", class: 'btn btn-primary' %>
+  <%= submit_tag "Get on it", class: 'btn btn-primary' %>
 <% end %>
 <div id = 'zip_alert' class = "special_alert" role = "alert">
     <%= flash.now[:notice] ? flash.now[:notice] : '' %>

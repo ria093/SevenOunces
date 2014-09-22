@@ -2,28 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.yummly-recipe-result {
+  top: 50px;
+  opacity: 0;
+}
 
 /*** YUMMLY RATING STARS ***/
-.star-pink {
-  color: #ea6c5d;
-}
 
 .star-grey {
   color: #C4C4C4;
 }
 
+.star-pink {
+  color: #ea6c5d;
+}
+
 .star-rating {
   width: 30%;
-}
-
-/*** "|" DIVIDER LINE ***/
-.divider-line {
-  padding-right: 8px;
-  padding-left: 8px;
-  display: inline-block;
-}
-
-.yummly-recipe-result {
-  top: 50px;
-  opacity: 0;
 }

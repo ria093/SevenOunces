@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
+  get 'home/about' #, as: 'about'
+  get 'home/test'
   resources :places, only: :index
   resources :external_recipes, only: :index
 

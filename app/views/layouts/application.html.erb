@@ -32,5 +32,8 @@
     <%= render :partial => "shared/nav" %>
   <% end %>
   <%= yield %>
+  <% unless override %>
+    <%= render :partial => "shared/footer" %>
+  <% end %>
 </body>
 </html>

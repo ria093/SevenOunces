@@ -1,13 +1,13 @@
-<div class="col-md-10 col-md-offset-1 clearfix">
-  <div class="col-md-12">
-    <h1>I'm Feeling Lazy.</h1>
+<div class = "col-md-10 col-md-offset-1 clearfix">
+  <div class = "col-md-12">
+    <h1>I'm Feeling Lazy</h1>
   </div>
-  <div class="col-md-7 buffer-bottom">
+  <div class = "col-md-7 buffer-bottom">
     <h4>
-      I just need someone to make me something with Nutella. Find restaurants that serve Nutella in my area.
+      Lucky you, you're on your way to your Nutella fix. Here are some great spots that serve Nutella near you.
     </h4>
   </div>
-  <div class="pull-right">
+  <div class = "pull-right">
     <%= render :partial => "shared/places_form" %>
   </div>
 </div>
@@ -19,24 +19,38 @@
     <%= render :partial => "shared/standard_error" %>
     <!-- END Fix -->
   <% else %>
-    <% @places.each do |place| %>
-      <div class ='c1 col-md-4'>
-        <div class="col-md-12 results-box">
-          <div class="results-image-container">
-          <%= image_tag(place.img_url, :alt => "rating", :class => "results-image") %>
-          </div>
-          <div class="results-box-content">
-            <h4 class="results-title">
-              <%= place.name  %>
-            </h4>
-            <%= image_tag(place.rating_img_url, :alt => "rating", :class => "") %>
-            <%= place.rating %> <div class="divider-line">|</div><%= place.phone %>
-            <%= place.distance %><br />
-            <%= place.address.join(', ')%> <br />
+    <div class = "masonry-outer-container">
+      <% @places.each do |place| %>
+        <div class = "col-md-4">
+          <div class = "col-md-12 results-box">
+            <div class = "results-image-container">
+              <%= link_to place.url, target: "_blank" do %>
+                <%= image_tag(place.img_url, :alt => "rating", :class => "results-image") %>
+              <% end %>
+            </div>
+            <div class = "results-box-content">
+              <%= link_to place.url, target: "_blank" do %>
+                <h4 class = "results-title">
+                  <%= place.name %>
+                </h4>
+              <% end %>
+              <%= image_tag(place.rating_img_url, :alt => "rating", :class => "") %>
+              <% if place.neighborhood %>
+                <div class = "divider-line">|</div>
+                <%= place.neighborhood %>
+              <% end %>
+              <br />
+              <%= place.address['address'].join(", ") %><br />
+              <%= "#{place.address['city']}, #{place.address['state']} #{place.address['postal_code']}" %><br />
+              <% if place.phone %>
+                <%= place.phone.gsub('-','.') %>
+              <% end %>
+              <br />
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   <% end %>
 </div>
 
