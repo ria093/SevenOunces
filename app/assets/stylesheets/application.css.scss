@@ -34,7 +34,7 @@ $neutral-extra-light: #eeeeee;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 #header{
@@ -185,8 +185,7 @@ body {
   margin: 10px 10px 10px 0; 
 }
 
-.special_alert
-{
+.special_alert {
   background: none;
   border: none; 
   color: $primary-color; 
@@ -199,14 +198,12 @@ body {
   width: 80%; 
 }
 
-.special_input
-{
+.special_input {
   border: 1px solid $neutral-light;
   margin: 0 0 20px 10px;
   padding: 10px 5px;
   height: 50px;
   width: 180px;
-  
   font-size: 1.2em;
   vertical-align: bottom;
 }
@@ -237,6 +234,7 @@ body {
   margin-top: 12px;
   right: 10px;
   opacity: 0.5;
+  z-index: 1;
 }
 
 .results-box {
@@ -252,7 +250,6 @@ body {
 
 }
 
-
 .results-box-content {
   padding: 10px 20px;
   background-color: #ffffff;
@@ -265,6 +262,12 @@ body {
 
 .results-image-container {
   border-bottom: 4px solid $primary-color;
+  overflow: hidden;
+
+  &.yummly-image-container {
+    max-height: 237px;
+  }
+
 }
 
 .results-title {
@@ -276,13 +279,12 @@ body {
 
 .results-box a {
   text-decoration:none;
-  color:$neutral-dark;
+  color: $neutral-dark;
 }
 
 .results-box a:hover {
   color: $primary-color;
 }
-
 
 /*** MASONRY STYLES ***/
 

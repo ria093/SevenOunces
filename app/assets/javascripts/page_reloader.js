@@ -20,8 +20,6 @@ $(document).ready(function(){
             $('#yummly-recipe-results').append(results);
             showRecipes();
 
-            // Add glimmer effects to all .results-box elements on hover
-            //addGlimmer();
         });
     });
 });

@@ -16,10 +16,10 @@
       <% @results.each do |result| %>
         <div class = "col-md-4 yummly-recipe-result">
           <div class = "col-md-12 results-box">
-            <div class = "results-image-container">
+            <div class = "results-image-container yummly-image-container">
+              <%= image_tag 'yummly-logo.png', class: 'API-logo'%>
               <%= link_to result.yummly_url, target: "_blank" do %>
                 <%= image_tag result.url_sm, class: 'results-image' %>
-                <%= image_tag 'yummly-logo.png', class: 'API-logo'%>  
               <% end %>
             </div>
             <div class = "results-box-content">
