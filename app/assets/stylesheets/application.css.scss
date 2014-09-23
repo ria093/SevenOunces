@@ -251,7 +251,7 @@ body {
 }
 
 .results-box-content {
-  padding: 10px 20px;
+  padding: 10px 20px 20px;
   background-color: #ffffff;
 }
 
@@ -275,6 +275,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .results-box a {
