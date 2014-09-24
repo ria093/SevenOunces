@@ -27,22 +27,6 @@ $neutral-extra-light: #eeeeee;
 
 /*** HEADER STYLES ***/
 
-#header-container {
-  background: $primary-color;
-  left: 0;
-  min-height: 55px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-}
-
-#header{
-  line-height: 3.5em;
-  margin: 0 auto;
-  width: 100%;
-}
-
 #header-offset {
   height: 60px;
 }
@@ -55,9 +39,63 @@ $neutral-extra-light: #eeeeee;
 }
 
 .logo-sm {
+  margin-top: 12px;
   width: 150px;
-  margin-top: 0px;
 }
+
+.navbar {
+  background: $primary-color;
+  min-height: 55px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-radius: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 1em;
+  height: 100%;
+  text-align: center;
+}
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: none;
+  border-top: none;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: white;
+  background-color: transparent;
+}
+
+.navbar-nav {
+  margin: 0px 10px;
+}
+
+.navbar-toggle {
+  float: none;
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+  opacity: 0.7;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+
+.navbar-default {
+  border-color: $primary-color;
+}
+
+
 
 @mixin vendor-prefix-keyframes($name, $property, $from, $to) {
   @-o-keyframes $name {
@@ -86,7 +124,7 @@ $neutral-extra-light: #eeeeee;
 .nav-item {
   display: inline-block;
   height:100%;
-  margin: 3px 10px;
+  margin: 3px 0px;
 }
 
 .nav-item a {
@@ -178,20 +216,20 @@ body {
   background-color: $neutral-light;
   font-size: 1em;
   padding: 1px 10px;
-  margin: 10px 10px 10px 0; 
+  margin: 10px 10px 10px 0;
 }
 
 .special_alert {
   background: none;
-  border: none; 
-  color: $primary-color; 
+  border: none;
+  color: $primary-color;
   //display: none;
   left: 10%;
-  margin: 0; 
-  padding: 0; 
-  position: absolute; 
-  right: 10%; 
-  width: 80%; 
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 10%;
+  width: 80%;
 }
 
 .special_input {
@@ -294,7 +332,7 @@ body {
   -moz-column-width: 22em;
   -webkit-column-width: 22em;
   -moz-column-gap: 0.1em;
-  -webkit-column-gap: 0.1em; 
+  -webkit-column-gap: 0.1em;
 }
 
 .masonry-outer-container > .col-md-4 {
@@ -308,8 +346,8 @@ body {
 /*** FOOTER STYLES ***/
 
 #footer {
-  background: url('footer_bckgd.png') no-repeat 0 0; 
-  background-size: auto 300px; 
+  background: url('footer_bckgd.png') no-repeat 0 0;
+  background-size: auto 300px;
   background-color: $neutral-extra-light;
   height: 300px;
   position: relative;
@@ -325,7 +363,6 @@ body {
   height: 300px;
   width:100%;
 }
-
 
 .footer-content {
   display: block;
@@ -394,4 +431,38 @@ h2, h3, h4 {
 .title-border {
   border-bottom: 4px solid;
   width: 35%;
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+
+}
+
+
+@media (max-width: 767px) {
+
+  .navbar-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float:none;
+  }
+
+  .logo-sm {
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+
 }
