@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <% if (yield :layout_override) === 'home' %>
-  <% override = true %>
+    <% override = true %>
 <% end %>
 <html class = <%= override ? 'home-bckgd' : '' %>>
 <head>
@@ -28,12 +28,12 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-  <% unless override %>
+<% unless override %>
     <%= render :partial => "shared/nav" %>
-  <% end %>
-  <%= yield %>
-  <% unless override %>
+<% end %>
+<%= yield %>
+<% unless override %>
     <%= render :partial => "shared/footer" %>
-  <% end %>
+<% end %>
 </body>
-</html>
+</html> class="push"></div>

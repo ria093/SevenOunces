@@ -15,7 +15,7 @@
 }
 
 .glyph-size-lg {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .home-bckgd {
@@ -24,8 +24,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-//  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
-//  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+  //  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  //  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
 .logo {
@@ -67,7 +67,7 @@
   .content-txt {
     padding: 20px;
     text-align: justify;
-    
+
     h1 {
       padding:0;
       margin:0;
@@ -171,7 +171,7 @@ $img-numbs: 1 2 3 4 5;
   }
 }
 
-.down-arrow, .down-arrow-alt, .up-arrow, .up-arrow-alt { 
+.down-arrow, .down-arrow-alt, .up-arrow, .up-arrow-alt {
   cursor: pointer;
   margin: 0 auto;
   height: 40px;
@@ -199,4 +199,3 @@ $img-numbs: 1 2 3 4 5;
 .up-arrow-alt {
   background: url(icon_up_arrow_alt.png);
 }
-
