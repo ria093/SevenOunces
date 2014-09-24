@@ -267,7 +267,6 @@ body {
   &.yummly-image-container {
     max-height: 237px;
   }
-
 }
 
 .results-title {
@@ -292,10 +291,10 @@ body {
 *, *:before, *:after {box-sizing:  border-box !important;}
 
 .masonry-outer-container {
-  -moz-column-width: 2em;
-  -webkit-column-width: 25em;
-  -moz-column-gap: 0;
-  -webkit-column-gap: 0; 
+  -moz-column-width: 22em;
+  -webkit-column-width: 22em;
+  -moz-column-gap: 0.1em;
+  -webkit-column-gap: 0.1em; 
 }
 
 .masonry-outer-container > .col-md-4 {
@@ -313,6 +312,11 @@ body {
   background-size: auto 300px; 
   background-color: $neutral-extra-light;
   height: 300px; 
+}
+
+.footer-content {
+  margin-top: 150px;
+  margin-right: 20px;
 }
 
 .footer-item {
