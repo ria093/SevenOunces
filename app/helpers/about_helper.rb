@@ -30,25 +30,23 @@ module AboutHelper
     end
   end
 
-  def content_block(content_id)
-    content_tag :div, :class => 'content-bar', :id => content_id do
-      yield if block_given? 
+  def content_block(content_id, anchor_id)
+    content_tag(:div, :class => 'content-bar red', :id => content_id) do
+      content_tag(:div, :class => 'row red') do
+        content_tag(:div, :class => 'col-md-10 col-md-offset-1 red') do
+          yield if block_given?
+        end 
+      end +
+      next_section(anchor_id, 'alt')
     end
   end
 
-  def next_section(anchor_id)
-    content_tag :a, :href => anchor_id, :class => 'down-arrow', :'aria-label' => 'Go to next section' do
-    end
-  end
-
-  def next_section_alt(anchor_id)
-    content_tag :a, :href => anchor_id, :class => 'down-arrow-alt', :'aria-label' => 'Go to next section' do
-    end
+  def next_section(anchor_id, style)
+    content_tag(:a, nil, :href => anchor_id, :class => (style == 'alt' ? 'down-arrow-alt':'down-arrow'), :'aria-label' => 'Go to next section')
   end
 
   def half_img_block(img_id)
-    content_tag :div, :class => 'gap gap-50', :id => img_id do
-    end
+    content_tag(:div, nil, :class => 'gap gap-50', :id => img_id)
   end
 
 end
