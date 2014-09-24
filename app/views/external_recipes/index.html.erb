@@ -5,6 +5,7 @@
   <div class = "col-md-7 buffer-bottom">
     <h4>
       Lucky you, you're on your way to your Nutella fix. Here are some great recipes we found for you. Get to it!
+      Brought to you by <%= image_tag 'yummly-logo.png', class: 'yummly-logo'%>.
     </h4>
   </div>
   <div class = "btn btn-primary pull-right" id="page-reloader">Make something else</div>
@@ -18,7 +19,6 @@
           <div class = "col-md-12 results-box">
             <div class = "results-image-container yummly-image-container">
               <%= link_to result.yummly_url, target: "_blank" do %>
-                <%= image_tag 'yummly-logo.png', class: 'API-logo'%>
                 <%= image_tag result.url_sm, class: 'results-image' %>
               <% end %>
             </div>

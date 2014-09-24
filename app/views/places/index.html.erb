@@ -11,7 +11,8 @@
         <% if @places.error.present? %>
           I just need someone to make me something with Nutella. Find restaurants that serve Nutella in my area.
         <% else %>
-          Lucky you, you're on your way to your Nutella fix. Here are some great spots that serve Nutella near you.
+          Lucky you, you're on your way to your Nutella fix. Here are some great spots that serve Nutella near you, 
+          brought to you by <%= image_tag 'yelp-logo.png', class: 'yelp-logo'%>.
         <% end %>
       </h4>
     </div>
@@ -32,7 +33,6 @@
             <div class = "col-md-12 results-box">
               <div class = "results-image-container">
                 <%= link_to place.url, target: "_blank" do %>
-                  <%= image_tag 'yelp-logo.png', class: 'API-logo'%>
                   <%= image_tag(place.img_url, :alt => "rating", :class => "results-image") %>
                 <% end %>
               </div>
@@ -61,8 +61,3 @@
       </div>
     <% end %>
   </div>
-
-
-
-
-
