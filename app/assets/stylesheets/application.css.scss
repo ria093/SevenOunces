@@ -224,12 +224,16 @@ body {
 
 /*** API RESULTS ***/
 
-.API-logo {
-  height: 21px;
-  position: absolute;
-  margin-top: 12px;
-  right: 10px;
+.yelp-logo {
+  height: 25px;
   z-index: 1;
+  margin-top: -7px;
+}
+
+.yummly-logo {
+  height: 20px;
+  z-index: 1;
+  margin-top: 4px;
 }
 
 .results-box {
