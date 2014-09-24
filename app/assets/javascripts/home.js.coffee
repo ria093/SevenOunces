@@ -10,3 +10,6 @@ $ ->
     else
       $('#zip_alert').html("Please enter a valid zipcode.")
       false
+
+$ ->
+  $('#error_alert').html("Lucky you, you're on your way to your Nutella fix. Just enter your zip code and get to eating!")

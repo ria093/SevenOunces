@@ -30,7 +30,7 @@ $neutral-extra-light: #eeeeee;
 #header-container {
   background: $primary-color;
   left: 0;
-  min-height: 60px;
+  min-height: 55px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -86,7 +86,7 @@ $neutral-extra-light: #eeeeee;
 .nav-item {
   display: inline-block;
   height:100%;
-  margin: 2px 20px;
+  margin: 3px 10px;
 }
 
 .nav-item a {
@@ -100,14 +100,10 @@ $neutral-extra-light: #eeeeee;
   text-decoration: none;
 }
 
-/* banner below navigation, not sticky */
-.banner-image {
-  background-image: url('nutella-muffin-placeholder.jpg');
-  background-repeat: no-repeat;
-  height: 200px;
-  width: 100%;  
+.social-icon {
+  width: 1.3em;
+  margin-bottom: 4px;
 }
-
 
 /*** BODY STYLES ***/
 
@@ -229,11 +225,10 @@ body {
 /*** API RESULTS ***/
 
 .API-logo {
-  width: 17px;
+  height: 21px;
   position: absolute;
   margin-top: 12px;
   right: 10px;
-  opacity: 0.5;
   z-index: 1;
 }
 
@@ -305,14 +300,13 @@ body {
   width:  100%;
 }
 
-
 /*** FOOTER STYLES ***/
 
 #footer {
   background: url('footer_bckgd.png') no-repeat 0 0; 
   background-size: auto 300px; 
   background-color: $neutral-extra-light;
-  height: 300px; 
+  height: 300px;
 }
 
 .footer-item {
@@ -323,20 +317,12 @@ body {
 
 /*** GENERAL STYLES ***/
 
-.buffer-left {
-  margin-left: 15px;
-}
+$orientations: left right top bottom;
 
-.buffer-right {
-  margin-right: 15px;
-}
-
-.buffer-top {
-  margin-top: 15px;
-}
-
-.buffer-bottom {
-  margin-bottom: 15px;
+@each $item in $orientations {
+  .buffer-#{$item} {
+    margin-#{$item}: 15px;
+  }
 }
 
 .center {

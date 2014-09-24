@@ -2,29 +2,36 @@
   <div class = "col-md-12">
     <h1>I'm Feeling Lazy</h1>
   </div>
+  <div class = "pull-right">
+    <%= render :partial => "shared/places_form" %>
+  </div>
+  <% if @places.error.present? %>
+      <!-- Fix this area later -->
+      <div class = "col-md-7 buffer-bottom">
+        <h4 id="error_alert">
+          <% flash.now[:notice] = @places.error.msg %>
+          <%= render :partial => "shared/standard_error" %>
+        </h4>
+      </div>
+      <!-- END Fix -->
+  <% else %>
   <div class = "col-md-7 buffer-bottom">
     <h4>
       Lucky you, you're on your way to your Nutella fix. Here are some great spots that serve Nutella near you.
     </h4>
   </div>
-  <div class = "pull-right">
-    <%= render :partial => "shared/places_form" %>
-  </div>
+
 </div>
 
 <div class = "col-md-10 col-md-offset-1">
-  <% if @places.error.present? %>
-    <!-- Fix this area later -->
-    <% flash.now[:notice] = @places.error.msg %>
-    <%= render :partial => "shared/standard_error" %>
-    <!-- END Fix -->
-  <% else %>
+
     <div class = "masonry-outer-container">
       <% @places.each do |place| %>
         <div class = "col-md-4">
           <div class = "col-md-12 results-box">
             <div class = "results-image-container">
               <%= link_to place.url, target: "_blank" do %>
+                <%= image_tag 'yelp-logo.png', class: 'API-logo'%>
                 <%= image_tag(place.img_url, :alt => "rating", :class => "results-image") %>
               <% end %>
             </div>
