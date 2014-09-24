@@ -1,9 +1,5 @@
 <% flash.each do |name, msg| %>
-  <div class = "alert alert-dismissible alert-<%= name == :notice ? 'success' : 'warning' %>" role = "alert">
-    <button type = "button" class = "close" data-dismiss = "alert">
-      <span aria-hidden = "true">&times;</span>
-      <span class = "sr-only">Close</span>
-    </button>
-    <%= msg %>
+  <div class = "alert alert-<%= name == :notice ? 'success' : 'warning' %> text-center" role = "alert">
+    Oh no! Looks like something went wrong.<br /><%= msg %>
   </div>
 <% end %>

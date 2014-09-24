@@ -28,10 +28,13 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-  <% unless override %>
-    <%= render :partial => "shared/nav" %>
-  <% end %>
-  <%= yield %>
+  <!-- <div class = "wrapper"> -->
+    <% unless override %>
+      <%= render :partial => "shared/nav" %>
+    <% end %>
+    <%= yield %>
+    <!-- <div class="push"></div>
+  </div> -->
   <% unless override %>
     <%= render :partial => "shared/footer" %>
   <% end %>
