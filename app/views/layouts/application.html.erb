@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<% if (yield :layout_override) === 'home' %>
-  <% override = true %>
-<% end %>
-<html class = <%= override ? 'home-bckgd' : '' %>>
+<% override = (yield :layout_override) %>
+<html class = <%= override == 'home' ? 'home-bckgd' : '' %>>
 <head>
   <title>SevenOunces</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -28,15 +26,15 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-  <!-- <div class = "wrapper"> -->
-    <% unless override %>
-      <%= render :partial => "shared/nav" %>
-    <% end %>
-    <%= yield %>
-    <!-- <div class="push"></div>
-  </div> -->
-  <% unless override %>
-    <%= render :partial => "shared/footer" %>
+  <% unless override == 'about' %>
+    <div class = "wrapper">
   <% end %>
+  <%= override == 'home' ? nil : (render :partial => "shared/nav") %>
+  <%= yield %>
+  <% unless override == 'about' %>
+      <div class="push"></div>
+    </div>
+  <% end %>
+  <%= override == 'home' ? nil : (render :partial => "shared/footer") %>
 </body>
 </html>
