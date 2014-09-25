@@ -1,10 +1,6 @@
-
   <div class = "col-md-10 col-md-offset-1 clearfix">
     <div class = "col-md-12">
       <h1>I'm Feeling Lazy</h1>
-    </div>
-    <div class = "pull-right">
-      <%= render :partial => "shared/places_form" %>
     </div>
     <div class = "col-md-7 buffer-bottom">
       <h4>
@@ -16,9 +12,20 @@
         <% end %>
       </h4>
     </div>
+    <div class="yelp-form-container">
+      <div class = "yelp-form hidden-xs hidden-sm pull-right">
+        <%= render :partial => "shared/places_form" %>
+      </div>
+      <div class = "yelp-form hidden-lg hidden-md hidden-xs pull-left">
+        <%= render :partial => "shared/places_form" %>
+      </div>
+      <div class = "yelp-form hidden-sm hidden-md hidden-lg">
+        <%= render :partial => "shared/places_form" %>
+      </div>
+    </div>
   </div>
 
-  <div class = "col-md-10 col-md-offset-1">
+  <div class = "col-md-10 col-md-offset-1 api-results-2">
     <% if @places.error.present? %>
         <!-- Fix this area later -->
         <div class = "col-md-12">
@@ -29,7 +36,7 @@
     <% else %>
       <div class = "masonry-outer-container">
         <% @places.each do |place| %>
-          <div class = "col-md-4">
+          <div class = "col-md-4 api-result">
             <div class = "col-md-12 results-box">
               <div class = "results-image-container">
                 <%= link_to place.url, target: "_blank" do %>

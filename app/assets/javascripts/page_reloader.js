@@ -1,25 +1,53 @@
 $(document).ready(function(){
 
     var showRecipes = function() {
-        $.each($(".yummly-recipe-result"), function(index, result){
+        $.each($(".api-result"), function(index, result){
             $(result).delay(index * 100).animate({ opacity: 1, top: 0 }, 300);
         });
     };
 
     showRecipes();
 
-    $("#page-reloader").click(function() {
+    $(".page-reloader").click(function() {
         $.get("/external_recipes", function(data){
             var results;
 
             // Clear out old recipes
-            $('#yummly-recipe-results').empty();
+            $('.api-results').empty();
 
             // Add new recipes to results list with animations.
-            results = $('#yummly-recipe-results .col-md-4', data);
-            $('#yummly-recipe-results').append(results);
+            results = $('.api-results .col-md-4', data);
+            $('.api-results').append(results);
             showRecipes();
 
         });
     });
+});
+
+$(document).ready(function(){
+
+    var showRecipes = function() {
+        $.each($(".api-result"), function(index, result){
+            $(result).delay(index * 100).animate({ opacity: 1, top: 0 }, 300);
+        });
+    };
+
+//    showRecipes();
+//
+//    $(".page-reloader").click(function() {
+//        $.get("/places", function(data){
+//            var results;
+//
+//            // Clear out old recipes
+//            $('.api-results-2').empty();
+//
+//            // Add new recipes to results list with animations.
+//            results = $('.api-results-2 .col-md-4', data);
+//            $('.api-results-2').append(results);
+//            showRecipes();
+//
+//        });
+//    });
+
+
 });

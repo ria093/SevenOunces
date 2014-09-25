@@ -8,14 +8,17 @@
       Brought to you by <%= image_tag 'yummly-logo.png', class: 'yummly-logo'%>.
     </h4>
   </div>
-  <div class = "btn btn-primary pull-right" id="page-reloader">Make something else</div>
+  <div class = "btn btn-primary btn-api hidden-xs page-reloader">Make something else</div>
+  <div class="btn-sm">
+  <div class = "btn btn-primary btn-api hidden-sm hidden-md hidden-lg page-reloader">Make something else</div>
+  </div>
 </div>
 
 <div><!-- Magic div. Do not touch. -->
-  <div class = "col-md-10 col-md-offset-1" id="yummly-recipe-results">
+  <div class = "col-md-10 col-md-offset-1 api-results">
     <div class = "masonry-outer-container">
       <% @results.each do |result| %>
-        <div class = "col-md-4 yummly-recipe-result">
+        <div class = "col-md-4 api-result">
           <div class = "col-md-12 results-box">
             <div class = "results-image-container yummly-image-container">
               <%= link_to result.yummly_url, target: "_blank" do %>
