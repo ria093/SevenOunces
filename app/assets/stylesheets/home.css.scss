@@ -51,9 +51,8 @@
   position: relative;
 
   .content-bar {
-    min-height: 400px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 100px;
     position: relative;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -61,17 +60,14 @@
   }
 
   .content-img{
-    margin: 20px;
+    margin: 10px 30px;
   }
 
-  .content-txt {
-    padding: 20px;
-    text-align: justify;
-
-    h1 {
-      padding:0;
-      margin:0;
-    }
+  h1, h2, h3, h4 {
+    padding-top: 0;
+    padding-bottom: 20px;
+    margin-top: 0;
+    text-transform: capitalize;
   }
 
   .content-full {
@@ -80,11 +76,28 @@
 
   .jumbotron {
     margin-bottom: 0px;
+
+    h1, h2, h3, h4 {
+      text-transform: none;
+    }
   }
 
   .row {
     padding:0;
     margin: 0;
+  }
+
+  .panel {
+    padding: 50px 0;
+  }
+
+  .col-text {
+    padding:0;
+    margin: 0;
+
+    p {
+      text-transform: justify;
+    }
   }
 
   .vcenter {
@@ -198,4 +211,52 @@ $img-numbs: 1 2 3 4 5;
 
 .up-arrow-alt {
   background: url(icon_up_arrow_alt.png);
+}
+
+ul li .bullet:before { 
+  content: "";
+}
+
+ul li {
+  list-style: none outside none;
+  padding: 0.3em;
+}
+
+ul li .bullet {
+  font-family: "Glyphicons Halflings";
+  font-size: 0.7em;
+  color: #c4c4c4;
+  padding-right: 15px;
+  display: table-cell;
+}
+
+ul li .content {
+  display: table-cell;
+}
+
+.big-numb {
+  font-size: 3.5em;
+  line-height: 1em;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+a .social {
+  margin: 2px;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  background-position: 0 0;
+  display: inline-block;
+}
+
+a .social:hover {
+  background-position: 0 -30px;
+}
+
+$social-media: linkedin github pinterest twitter instagram portfolio;
+@each $item in $social-media {
+  .#{$item} {
+    background: url(icon_#{$item}.png) no-repeat;
+  }
 }
