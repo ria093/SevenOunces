@@ -32,22 +32,5 @@ $(document).ready(function(){
         });
     };
 
-//    showRecipes();
-//
-//    $(".page-reloader").click(function() {
-//        $.get("/places", function(data){
-//            var results;
-//
-//            // Clear out old recipes
-//            $('.api-results-2').empty();
-//
-//            // Add new recipes to results list with animations.
-//            results = $('.api-results-2 .col-md-4', data);
-//            $('.api-results-2').append(results);
-//            showRecipes();
-//
-//        });
-//    });
-
 
 });

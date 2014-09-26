@@ -194,6 +194,10 @@ body {
   text-decoration: none;
 }
 
+.btn-api {
+  float: right;
+}
+
 .btn-primary {
   background-color: $primary-color;
   border-color: $primary-color;
@@ -251,14 +255,6 @@ body {
   vertical-align: bottom;
 }
 
-
-
-
-.btn-api {
-  float: right;
-}
-
-
 /*** PANEL STYLES ***/
 
 .panel {
@@ -267,28 +263,21 @@ body {
   min-width: 330px;
 }
 
+.panel-default {
+  opacity: 0.8;
+}
+
 .panel-text {
   font-size: 1.2em;
   margin: 25px 20px;
 }
 
-.panel-default {
-  opacity: 0.8;
-}
-
 
 /*** API RESULTS ***/
 
-.yelp-logo {
-  height: 25px;
-  z-index: 1;
-  margin-top: -7px;
-}
-
-.yummly-logo {
-  height: 20px;
-  z-index: 1;
-  margin-top: 4px;
+.api-result {
+  top: 50px;
+  opacity: 0;
 }
 
 .results-box {
@@ -301,6 +290,15 @@ body {
   -ms-transition: all 300ms linear;
   -kthtml-transition: all 300ms linear;
   transition: all 300ms linear;
+}
+
+.results-box a {
+  text-decoration:none;
+  color: $neutral-dark;
+}
+
+.results-box a:hover {
+  color: $primary-color;
 }
 
 .results-box-content {
@@ -330,18 +328,16 @@ body {
   margin-bottom: 5px;
 }
 
-.results-box a {
-  text-decoration:none;
-  color: $neutral-dark;
+.yelp-logo {
+  height: 25px;
+  z-index: 1;
+  margin-top: -7px;
 }
 
-.results-box a:hover {
-  color: $primary-color;
-}
-
-.api-result {
-  top: 50px;
-  opacity: 0;
+.yummly-logo {
+  height: 20px;
+  z-index: 1;
+  margin-top: 4px;
 }
 
 
@@ -373,17 +369,6 @@ body {
   height: 300px;
   position: relative;
 }
- 
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  margin: 0 auto -300px;
-}
-
-.push {
-  height: 300px;
-  width:100%;
-}
 
 .footer-content {
   display: block;
@@ -398,6 +383,16 @@ body {
   color: $neutral-dark;
 }
 
+.push {
+  height: 300px;
+  width:100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  margin: 0 auto -300px;
+}
 
 /*** GENERAL STYLES ***/
 
@@ -405,22 +400,10 @@ a:focus {
   outline: none;
 }
 
-$orientations: left right top bottom;
-
-@each $item in $orientations {
-  .buffer-#{$item} {
-    margin-#{$item}: 15px;
-  }
-}
-
 .center {
   float: none;
   margin-left: auto;
   margin-right: auto;
-}
-
-.pull-center {
-  text-align: center;
 }
 
 .divider-line {
@@ -434,6 +417,11 @@ h1 {
   font-size: 3em;
   margin-top: 50px;
   margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+h3 {
+  color: $primary-color;
 }
 
 h2, h3, h4 {
@@ -458,6 +446,17 @@ h2, h3, h4 {
   width: 35%;
 }
 
+$orientations: left right top bottom;
+@each $item in $orientations {
+  .buffer-#{$item} {
+    margin-#{$item}: 15px;
+  }
+}
+
+.pull-center {
+  text-align: center;
+}
+
 @media (max-width: 1203px) {
 
   h1.home-title {
@@ -469,8 +468,6 @@ h2, h3, h4 {
   }
 
 }
-
-
 
 @media (min-width: 768px) and (max-width: 979px) {
 
@@ -488,20 +485,13 @@ h2, h3, h4 {
 
 }
 
-
 @media (max-width: 767px) {
 
-  .navbar-toggle {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    float:none;
-  }
-
-  .logo-sm {
-    width: 150px;
-    display: block;
-    margin: 10px auto;
+  .btn {
+    color: white;
+    font-size: 1.4em;
+    margin: 0 15px 20px;
+    padding: 10px 25px;
   }
 
   .btn-api {
@@ -510,36 +500,42 @@ h2, h3, h4 {
     margin-left: 5px;
   }
 
+  .btn-container-sm {
+    width: 92%;
+    text-align: center;
+    margin-left: 14px;
+  }
+
+  #footer {
+    background-position: 27%;
+  }
+
+  .logo-sm {
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float:none;
+  }
+
+  .special_input {
+    margin: 0 0 20px 5px;
+
+  }
+
   .yelp-form {
     margin-left: 5px;
     float:left;
   }
 
-  .btn-sm {
-    width: 97%;
-    // padding-right: 22px;
-    text-align: center;
-  }
-
-  .btn {
-    color: white;
-    font-size: 1.4em;
-    margin: 0 0px 20px 6px;
-    padding: 10px 25px;
-  }
-
   .yelp-form-container {
     margin-left: 5px;
     width: 100%;
-  }
-
-  .special_input {
-    margin: 0 0 20px 5px;
-    width: 100%;
-  }
-
-  #footer {
-    background-position: 27%;
   }
 
 }
@@ -547,28 +543,61 @@ h2, h3, h4 {
 
 @media (max-width: 480px) {
 
-  .yelp-form {
-    margin-left: 5px;
-    float:left;
-    width: 100%;
+  .btn {
+    white-space: normal;
+    font-size: 1.2em;
+    margin: 0 0 20px;
   }
 
-  .yelp-form-container {
-    margin-left: 5px;
-    width: 93%;
+  #footer {
+    background-position: 20% 100%;
+    background-size: auto 220px;
   }
 
-  .special_input {
-    margin: 0 0 20px 5px;
-    width: 100%;
+  .footer-content {
+    bottom: -185px;
+    right: 29px;
   }
 
   h1 {
       font-size: 2.3em;
   }
 
-  #footer {
-    background-position: 20%;
+  h1.home-title {
+    font-size: 2.1em;
+    line-height: 1.2em;
+  }
+
+  .home-panel .panel {
+    padding: 5px 15px;
+    min-height: 10px;
+    min-width: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .panel-body {
+    padding: 0;
+  }
+
+  .panel-text {
+    margin: 20px 0px;
+  }
+
+  .special_input {
+    margin: 0 0 20px;
+    width: 100%;
+  }
+
+  .yelp-form {
+    margin-left: 11px;
+    float:left;
+    width: 100%;
+  }
+
+  .yelp-form-container {
+    margin-left: 5px;
+    width: 91%;
   }
 
 }
