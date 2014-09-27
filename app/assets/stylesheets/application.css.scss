@@ -17,6 +17,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /*** COLOR VARIABLES ***/
 
 $primary-color: #ea6c5d;
@@ -24,6 +25,7 @@ $primary-color-light: #f0978d;
 $neutral-dark: #646464;
 $neutral-light: #c4c4c4;
 $neutral-extra-light: #eeeeee;
+
 
 /*** HEADER STYLES ***/
 
@@ -95,8 +97,6 @@ $neutral-extra-light: #eeeeee;
   border-color: $primary-color;
 }
 
-
-
 @mixin vendor-prefix-keyframes($name, $property, $from, $to) {
   @-o-keyframes $name {
     from { #{$property}: $from; }
@@ -161,6 +161,7 @@ body {
 .home-bckgd body {
   background: none;
 }
+
 
 /*** BUTTON STYLES ***/
 
@@ -254,6 +255,7 @@ body {
   font-size: 1.2em;
   vertical-align: bottom;
 }
+
 
 /*** PANEL STYLES ***/
 
@@ -394,6 +396,31 @@ body {
   margin: 0 auto -300px;
 }
 
+
+/*** LIST STYLES ***/
+
+ul li .bullet:before { 
+  content: "";
+}
+
+ul li {
+  list-style: none outside none;
+  padding: 0.3em;
+}
+
+ul li .bullet {
+  font-family: "Glyphicons Halflings";
+  font-size: 0.7em;
+  color: #c4c4c4;
+  padding-right: 15px;
+  display: table-cell;
+}
+
+ul li .content {
+  display: table-cell;
+}
+
+
 /*** GENERAL STYLES ***/
 
 a:focus {
@@ -456,6 +483,9 @@ $orientations: left right top bottom;
 .pull-center {
   text-align: center;
 }
+
+
+/*** MEDIA QUERIES ***/
 
 @media (max-width: 1203px) {
 
@@ -525,7 +555,6 @@ $orientations: left right top bottom;
 
   .special_input {
     margin: 0 0 20px 5px;
-
   }
 
   .yelp-form {
@@ -560,7 +589,7 @@ $orientations: left right top bottom;
   }
 
   h1 {
-      font-size: 2.3em;
+    font-size: 2.3em;
   }
 
   h1.home-title {

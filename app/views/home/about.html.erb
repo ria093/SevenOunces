@@ -43,9 +43,9 @@
         about Nutella:
       </p>
       <ul>
-        <%= list_item() do %>Nutella is turning 50 years old in 2014.<% end %>
         <%= list_item() do %>One jar of Nutella is sold every 2.5 seconds in over 75 countries.<% end %>
         <%= list_item() do %>You could circle the world 1.4 times with the amount of Nutella sold in a year.<% end %>
+        <%= list_item() do %>The name 'Nutella' came about as a result of combining the English word 'nut' and the Latin suffix for sweet &mdash; 'ella.'<% end %>
       </ul>
       </div>
     </div>
@@ -55,7 +55,7 @@
   <%= content_block('img-anchor-03', '#img-anchor-04') do %>
     <div class = "col-md-6 col-md-offset-2 vcenter">
       <div class = "col-md-10 col-md-offset-2">
-      <h1>We heart food & code</h1>
+      <h1>We heart food &amp; code</h1>
       <p>
         Now that you know how great Nutella is, you get our dilemma: we needed to find more ways to consume Nutella.
         We thought other people might appreciate a solution as well.
@@ -143,8 +143,7 @@
       <div class = "col-md-10">
       <h1>How do we stack up?</h1>
       <p>Just like hazelnuts and chocolate create the perfect spread, we used great ingredients to create a pretty awesome site.</p>
-      <p>We painstakingly set up food photoshoots, created a visual design concept and branding, and implemented the site with SCSS, </p>
-      <p>We started with a visual design concept, twitter bootstrap and CSS3.</p>
+      <p>We painstakingly set up food photoshoots, created a visual design concept and branding, and implemented the site with twitter bootstrap, SCSS, and CSS3.</p>
       <p>The site is built with Ruby on Rails and jQuery, and deployed to Heroku. We also used APIs from Yelp and Yummly to make your search more effective!</p>
       </p>
       </div>
@@ -156,10 +155,10 @@
   <%= content_block('img-anchor-06', '#img-anchor-01', 'up-arrow-alt') do %>
     <div class = "col-md-10 col-md-offset-1 panel text-center">
       <h1>While building this site:</h1>
-      <%= stat_block('icon_ratio.png', '3:1') do %> coding to eating<br />ratio <% end %>
-      <%= stat_block('icon_nutella.png', '6,382') do %> jars of nutella<br />bought worldwide <% end %>
-      <%= stat_block('icon_code.png', '2,372') do %> lines of code <br />committed <% end %>
-      <%= stat_block('icon_glass.png', '1') do %> perfected old<br />fashioned recipe <% end %>
+      <%= stat_block('icon_ratio.png', '3:1', 'coding to eating<br />ratio') %>
+      <%= stat_block('icon_nutella.png', '6,382', 'jars of nutella<br />bought worldwide') %>
+      <%= stat_block('icon_code.png', '2,372', 'lines of code <br />committed') %>
+      <%= stat_block('icon_glass.png', '1', 'perfected old<br />fashioned recipe') %>
     </div>
   <% end %>
 
