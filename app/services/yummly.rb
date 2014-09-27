@@ -19,17 +19,20 @@ class Yummly
   end
 
   def self.search(recipe_name)
-    recipes_response = Faraday.get('http://api.yummly.com/v1/api/recipes',
-                                   _app_id: ENV['YUMMLY_APP_ID'],
-                                   _app_key: ENV['YUMMLY_APP_KEY'],
-                                   q: recipe_name,
-                                   maxResult: 12,
-                                   start: rand(500),
-                                   requirePictures: true)
-    JSON.parse(recipes_response.body)['matches'].map do |recipe_json|
-      SearchResult.new(recipe_json['recipeName'], recipe_json['rating'], recipe_json['totalTimeInSeconds'],
-                       recipe_json['ingredients'], display_img_url(recipe_json['smallImageUrls'].try(:first)), recipe_json['id'])
-    end
+    page = rand(500)
+    Rails.cache.fetch("yummly-page-#{page}", expires_in: 1.day) {
+      recipes_response = Faraday.get('http://api.yummly.com/v1/api/recipes',
+                                     _app_id: ENV['YUMMLY_APP_ID'],
+                                     _app_key: ENV['YUMMLY_APP_KEY'],
+                                     q: recipe_name,
+                                     maxResult: 12,
+                                     start: page,
+                                     requirePictures: true)
+      JSON.parse(recipes_response.body)['matches'].map do |recipe_json|
+        SearchResult.new(recipe_json['recipeName'], recipe_json['rating'], recipe_json['totalTimeInSeconds'],
+                         recipe_json['ingredients'], display_img_url(recipe_json['smallImageUrls'].try(:first)), recipe_json['id'])
+      end
+    }
   end
 
   private
