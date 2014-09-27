@@ -32,6 +32,9 @@ gem 'faraday', '~> 0.9.0'
 # environmental variable configuration
 gem 'dotenv-rails', groups: [:development, :test]
 
+# Server monitoring
+gem 'newrelic_rpm', '~> 3.9.4.245'
+
 group :development do
   # sqlite3 for ActiveRecord
   gem 'sqlite3', '~> 1.3.9'
