@@ -4,14 +4,20 @@
 
 /*** HOME PAGE STYLES ***/
 
+.home-panel {
+  opacity: 0;
+}
+
 .logo-lg {
   width: 300px;
   margin: 40px 0 60px;
   opacity: 0;
 }
 
-.home-panel {
-  opacity: 0;
+.logo {
+  width: 300px;
+  margin-bottom: 45px;
+  margin-top: 40px;
 }
 
 .glyph-size-lg {
@@ -28,16 +34,11 @@
   //  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
-.logo {
-  width: 300px;
-  margin-bottom: 45px;
-  margin-top: 40px;
-}
-
 .home-title {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 
 /*** ABOUT PAGE STYLES ***/
 
@@ -79,6 +80,7 @@
 
     h1, h2, h3, h4 {
       text-transform: none;
+      color: white;
     }
   }
 
@@ -96,7 +98,7 @@
     margin: 0;
 
     p {
-      text-transform: justify;
+      text-align: justify;
     }
   }
 
@@ -184,6 +186,16 @@ $img-numbs: 1 2 3 4 5;
   }
 }
 
+.big-numb {
+  font-size: 3.5em;
+  line-height: 1em;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+
+/*** ARROW STYLES ***/
+
 .down-arrow, .down-arrow-alt, .up-arrow, .up-arrow-alt {
   cursor: pointer;
   margin: 0 auto;
@@ -213,33 +225,8 @@ $img-numbs: 1 2 3 4 5;
   background: url(icon_up_arrow_alt.png);
 }
 
-ul li .bullet:before { 
-  content: "";
-}
 
-ul li {
-  list-style: none outside none;
-  padding: 0.3em;
-}
-
-ul li .bullet {
-  font-family: "Glyphicons Halflings";
-  font-size: 0.7em;
-  color: #c4c4c4;
-  padding-right: 15px;
-  display: table-cell;
-}
-
-ul li .content {
-  display: table-cell;
-}
-
-.big-numb {
-  font-size: 3.5em;
-  line-height: 1em;
-  margin-top: 15px;
-  font-weight: 300;
-}
+/*** SOCIAL ICONS ***/
 
 a .social {
   margin: 2px;

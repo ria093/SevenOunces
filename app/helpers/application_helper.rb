@@ -7,6 +7,4 @@ module ApplicationHelper
     "https://twitter.com/intent/tweet?text=#{escaped_text}&url=#{escaped_url}&original_referer=#{referer_url}"
   end
 
-
-
 end

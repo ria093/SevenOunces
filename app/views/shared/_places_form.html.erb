@@ -1,6 +1,6 @@
 <div>
 <%= form_tag "/places/", method: :get, class: 'form-inline', name: 'places_form' do -%>
-  <%= text_field_tag 'location', nil, class: 'special_input required', :minlength => "3", :maxlength => "60", placeholder: 'Enter zip code' %>
+  <%= text_field_tag 'location', @location, class: 'special_input required', :minlength => "3", :maxlength => "60", placeholder: 'Enter your location' %>
       <%= submit_tag "Get on it", class: 'btn btn-primary page-reloader' %>
 <% end %>
 <div id = 'zip_alert' class = "special_alert" role = "alert">

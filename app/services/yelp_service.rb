@@ -38,52 +38,57 @@ class YelpService
     search_results.each(&block)
   end
 
-  def self.search(term, category, location)
-    return new(nil, Error.new(1, 'Please enter a valid zipcode.')) unless location.strip =~ /^[0-9]{5}$/
-    all_results = call_API(location, set_params(term, category))
-    filtered_results = filter_results(all_results)
-    return new(nil, Error.new(0, 'Oh no! No one currently serves Nutella in your area. :(')) unless filtered_results.present?
-    new(filtered_results, nil)
-  rescue => exception
-    if exception.is_a?(Yelp::Error::UnavailableForLocation)
-      new(nil, Error.new(1, 'Uh oh! It looks like the zipcode you entered is not valid.'))
-    else
-      new(nil, Error.new(0, exception.inspect))
+  class << self
+
+    def search(term, category, location)
+      # return new(nil, Error.new(1, 'Please enter a valid zipcode.')) location.strip =~ /^[0-9]{5}$/
+      return new(nil, Error.new(1, 'Please enter your location.')) unless location.present?
+      all_results = call_API(location, set_params(term, category))
+      filtered_results = filter_results(all_results)
+      return new(nil, Error.new(0, 'No one currently serves Nutella in your area. :(')) unless filtered_results.present?
+      new(filtered_results, nil)
+    rescue => exception
+      if exception.is_a?(Yelp::Error::UnavailableForLocation)
+        new(nil, Error.new(1, 'The location you entered is not valid.'))
+      else
+        new(nil, Error.new(0, 'Oh no! Looks like something went wrong.'))
+      end
     end
-  end
 
-  private
+    private
 
-  def self.set_params(term, category)
-    { 
-      term: term,
-      category: category,
-      limit: 20, # Max number of results returned
-      offset: 0, # Offset the list of returned results
-      sort: 0, # Sort by highest-rated
-      radius_filter: 1600 # Search radius set to 1 mile
-    }
-  end
-
-  def self.call_API(location, params)
-    JSON.parse(Yelp.client.search(location,params).to_json)
-  end
-
-  def self.filter_results(results)
-    results['businesses'].select { |business| business['is_closed'] == false }.map do |place|
-      SearchResult.new(place['name'], 
-                       place['rating'], 
-                       place['display_phone'], 
-                       place['location'], 
-                       place['location']['neighborhoods'].try(:first),
-                       place['rating_img_url'], 
-                       display_img_url(place['image_url']),
-                       place['url'])
+    def set_params(term, category)
+      { 
+        term: term,
+        category: category,
+        limit: 20, # Max number of results returned
+        offset: 0, # Offset the list of returned results
+        sort: 0, # Sort by highest-rated
+        radius_filter: 1600 # Search radius set to 1 mile
+      }
     end
-  end
 
-  def self.display_img_url(url)
-    url.sub(/ms.jpg$/, 'l.jpg') 
+    def call_API(location, params)
+      JSON.parse(Yelp.client.search(location,params).to_json)
+    end
+
+    def filter_results(results)
+      results['businesses'].select { |business| business['is_closed'] == false }.map do |place|
+        SearchResult.new(place['name'], 
+                         place['rating'], 
+                         place['display_phone'], 
+                         place['location'], 
+                         place['location']['neighborhoods'].try(:first),
+                         place['rating_img_url'], 
+                         display_img_url(place['image_url']),
+                         place['url'])
+      end
+    end
+
+    def display_img_url(url)
+      url.sub(/ms.jpg$/, 'l.jpg') 
+    end
+
   end
 
 end
