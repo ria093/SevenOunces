@@ -25,7 +25,7 @@
 }
 
 .home-bckgd {
-  background: url(home_bckgd.png) no-repeat center center fixed;
+  background: image-url("home_bckgd.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -182,7 +182,7 @@
 $img-numbs: 1 2 3 4 5;
 @each $item in $img-numbs {
   #img-0#{$item} {
-    background-image: url(about_bckgd_0#{$item}.png);
+    background-image: image-url('about_bckgd_0#{$item}.png');
   }
 }
 
@@ -210,19 +210,19 @@ $img-numbs: 1 2 3 4 5;
 }
 
 .down-arrow {
-  background: url(icon_down_arrow.png);
+  background: image-url('icon_down_arrow.png');
 }
 
 .down-arrow-alt {
-  background: url(icon_down_arrow_alt.png);
+  background: image-url('icon_down_arrow_alt.png');
 }
 
 .up-arrow {
-  background: url(icon_up_arrow.png);
+  background: image-url('icon_up_arrow.png');
 }
 
 .up-arrow-alt {
-  background: url(icon_up_arrow_alt.png);
+  background: image-url('icon_up_arrow_alt.png');
 }
 
 
@@ -244,6 +244,6 @@ a .social:hover {
 $social-media: linkedin github pinterest twitter instagram portfolio;
 @each $item in $social-media {
   .#{$item} {
-    background: url(icon_#{$item}.png) no-repeat;
+    background: image-url('icon_#{$item}.png') no-repeat;
   }
 }
