@@ -92,7 +92,6 @@ $neutral-extra-light: #eeeeee;
   background-color: #ffffff;
 }
 
-
 .navbar-default {
   border-color: $primary-color;
 }
@@ -123,7 +122,7 @@ $neutral-extra-light: #eeeeee;
 
 .nav-item {
   display: inline-block;
-  height:100%;
+  height: 100%;
   margin: 3px 0px;
 }
 
@@ -134,11 +133,11 @@ $neutral-extra-light: #eeeeee;
 }
 
 .nav-item a:hover {
-  opacity:0.8;
+  opacity: 0.8;
   text-decoration: none;
 }
 
-.social-icon {
+.share-icon {
   width: 1.3em;
   margin-bottom: 4px;
 }
@@ -173,7 +172,7 @@ body {
 }
 
 .btn:hover {
-  color:white;
+  color: white;
   opacity: 0.7;
 }
 
@@ -197,6 +196,8 @@ body {
 
 .btn-api {
   float: right;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .btn-primary {
@@ -231,29 +232,6 @@ body {
   font-size: 1em;
   padding: 1px 10px;
   margin: 10px 10px 10px 0;
-}
-
-.special_alert {
-  background: none;
-  border: none;
-  color: $primary-color;
-  //display: none;
-  left: 10%;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  right: 10%;
-  width: 80%;
-}
-
-.special_input {
-  border: 1px solid $neutral-light;
-  margin: 0 0 20px 10px;
-  padding: 10px 5px;
-  height: 50px;
-  width: 180px;
-  font-size: 1.2em;
-  vertical-align: bottom;
 }
 
 
@@ -295,7 +273,7 @@ body {
 }
 
 .results-box a {
-  text-decoration:none;
+  text-decoration: none;
   color: $neutral-dark;
 }
 
@@ -340,6 +318,50 @@ body {
   height: 20px;
   z-index: 1;
   margin-top: 4px;
+}
+
+
+/*** PLACES FORM ***/
+
+.special_alert {
+  background: none;
+  border: none;
+  color: $primary-color;
+  //display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  text-align: center;
+}
+
+.special_input {
+  border: 1px solid $neutral-light;
+  margin: 0 0 20px 10px;
+  padding: 10px 5px;
+  height: 50px;
+  width: 180px;
+  font-size: 1.2em;
+  vertical-align: bottom;
+}
+
+.places-form-container {
+  float:right;
+  position: relative;
+  text-align: center;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+
+  .special_input, .btn {
+    margin-bottom: 10px;
+    margin-right:0;
+  }
+
+  .special_alert {
+    bottom: 0;
+  }
 }
 
 
@@ -503,28 +525,53 @@ $orientations: left right top bottom;
   }
 
   .special_input {
-    width: 165px;
+    width: 155px;
   }
 
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 992px) and (max-width: 1025px ) {
+
+  .places-form-container {
+    text-align: center;
+
+    .special_input, .btn {
+      margin:0 0 10px 0;
+      width: 100%;
+    }
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px ) {
 
   .btn-api {
     float: left;
-  }
-
-  .yelp-form {
-    float:left;
+    margin-right:0;
   }
 
   #footer {
     background-position: 27%;
   }
 
+  .places-form-container {
+    float:none;
+    text-align:left;
+
+    .special_input, .btn {
+      margin: 0 10px 10px 0;
+      width: auto;
+    }
+
+    .special_alert {
+      text-align: left;
+      position: static;
+    }
+  }
+
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   .btn {
     color: white;
@@ -537,12 +584,6 @@ $orientations: left right top bottom;
     float: left;
     width:100%;
     margin-left: 5px;
-  }
-
-  .btn-container-sm {
-    width: 92%;
-    text-align: center;
-    margin-left: 14px;
   }
 
   #footer {
@@ -566,18 +607,28 @@ $orientations: left right top bottom;
     margin: 0 0 20px 5px;
   }
 
-  .yelp-form {
-    margin-left: 5px;
-    float:left;
-  }
+  .places-form-container {
+    float:none;
+    text-align:left;
 
-  .yelp-form-container {
-    margin-left: 5px;
-    width: 100%;
+    .special_input, .btn {
+      margin: 0 1% 10px 0;
+      width: 58%;
+    }
+
+    .btn {
+      margin: 0 0 10px 1%;
+      width: 39%
+    }
+
+    .special_alert {
+      text-align: left;
+      position: static;
+    }
+
   }
 
 }
-
 
 @media (max-width: 480px) {
 
@@ -607,7 +658,7 @@ $orientations: left right top bottom;
   }
 
   .home-panel .panel {
-    padding: 5px 15px;
+    padding: 10px 15px;
     min-height: 10px;
     min-width: 10px;
     margin-left: 0;
@@ -615,7 +666,7 @@ $orientations: left right top bottom;
   }
 
   .panel-body {
-    padding: 0;
+    padding: 10px 0;
   }
 
   .panel-text {
@@ -627,15 +678,18 @@ $orientations: left right top bottom;
     width: 100%;
   }
 
-  .yelp-form {
-    margin-left: 11px;
-    float:left;
-    width: 100%;
+  .special_alert {
+    bottom: 10px;
   }
 
-  .yelp-form-container {
-    margin-left: 5px;
-    width: 91%;
+  .places-form-container {
+    float: none;
+    text-align: center;
+
+    .special_input, .btn {
+      margin: 0 0 10px 0;
+      width: 100%;
+    }
   }
 
 }
