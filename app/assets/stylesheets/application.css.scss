@@ -457,6 +457,15 @@ $orientations: left right top bottom;
   text-align: center;
 }
 
+@media (min-width: 1530px) {
+
+  #footer {
+    background-size: auto 500px;
+    height: 500px;
+  }
+
+}
+
 @media (max-width: 1203px) {
 
   h1.home-title {
