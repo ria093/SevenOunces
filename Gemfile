@@ -33,7 +33,7 @@ gem 'faraday', '~> 0.9.0'
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Server monitoring
-gem 'newrelic_rpm', '~> 3.9.4.245'
+gem 'newrelic_rpm', '~> 3.9.4'
 
 group :development do
   # sqlite3 for ActiveRecord
