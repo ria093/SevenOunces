@@ -30,9 +30,10 @@ Search nearby locations that serve Nutella or find a great recipe you can make a
       <div class="push"></div>
     </div>
   <% end %>
-  <%= override == 'home' ? nil : (render :partial => "shared/footer") %>
+  <%= render('shared/footer') unless override.in?(%w[home about]) %>
+
   <%= javascript_include_tag 'application' %>
-  <%= render "layouts/analytics" %>
+  <%= render 'shared/analytics' %>
 </body>
 </html>
   

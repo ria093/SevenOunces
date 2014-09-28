@@ -9,154 +9,137 @@
 <%= half_display_img('img-04','#img-anchor-04') %>
 <%= half_display_img('img-05','#img-anchor-05') %>
 
-<div id = "skrollr-body">
-  <div id = "img-anchor-01"></div>
-  <div class = "gap gap-100 row" id = "img-01">
-    <div class = "col-md-10 col-md-offset-1">
-      <h1>Find new and exciting ways to add Nutella into your everyday life.</h1>
-      <h3>Search nearby locations that serve Nutella or find a great recipe you can make at home. It's all here.</h3>
+<div id="skrollr-body">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div id="img-anchor-01"></div>
+      <div class="gap gap-100" id="img-01">
+        <div class="jumbotron">
+          <h1>Find new and exciting ways to add Nutella into your everyday life.</h1>
+          <h3>Search nearby locations that serve Nutella or find a great recipe you can make at home. It's all here.</h3>
+          <%= next_section('#img-anchor-02') %>
+        </div>
+      </div>
+
+
+      <%= content_block('img-anchor-02', '#img-anchor-03') do %>
+        <div class="row">
+          <div class="col-sm-5">
+            <%= image_tag 'img_nutella.png', width: 250, height: 250, alt: "Nutella Jars", class: "content-img" %>
+          </div>
+          <div class="col-sm-7">
+            <h1>Nom Nom Nom!</h1>
+            <p>
+              Just in case you've been living under a rock, we want you to know: Nutella is
+              awesome! Not convinced by our sheer excitement? Here are some fun facts
+              about Nutella:
+            </p>
+            <ul>
+              <%= list_item do %>One jar of Nutella is sold every 2.5 seconds in over 75 countries.<% end %>
+              <%= list_item do %>You could circle the world 1.4 times with the amount of Nutella sold in a year.<% end %>
+              <%= list_item do %>The name 'Nutella' came about as a result of combining the English word 'nut' and the Latin
+                  suffix for sweet &mdash; 'ella.'
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+      <%= half_img_block('img-02') %>
+
+      <%= content_block('img-anchor-03', '#img-anchor-04') do %>
+        <div class="row">
+          <div class="col-sm-7">
+            <h1>We heart food &amp; code</h1>
+            <p>
+              Now that you know how great Nutella is, you get our dilemma: we needed to find more ways to consume Nutella.
+              We thought other people might appreciate a solution as well.
+            </p>
+          </div>
+          <div class="col-sm-5">
+            <%= image_tag 'img_bourbon.png', width: 250, height: 250, alt: "Bourbon and Code", class: "content-img" %>
+          </div>
+        </div>
+      <% end %>
+      <%= half_img_block('img-03') %>
+
+
+      <%= content_block('img-anchor-04', '#img-anchor-05') do %>
+        <div class="row">
+          <h1 class="text-center">So who are we?</h1>
+          <div class="col-sm-6">
+            <%= image_tag 'img_michelle.png', width: 150, height: 150, alt: "Michelle", class: "center-block" %>
+            <h3 class="text-center"><strong>MICHELLE</strong><br />
+              <em>the UX designer</em>
+            </h3>
+            <p>
+              Michelle can't seem to stop mixing food and code. She started designing and developing websites for urban
+              farms back in college and hasn't looked back. When she's not doing UX and visual design, you'll find her
+              taking overly artistic photos of basic food items.
+            </p>
+            <a href="https://twitter.com/SpinningSpoons"><span class="social twitter"></span></a>
+            <a href="http://www.linkedin.com/in/venetucci"><span class="social linkedin"></span></a>
+            <a href="https://github.com/venetucci"><span class="social github"></span></a>
+            <a href="http://www.anaperitif.com/portfolio"><span class="social portfolio"></span></a>
+            <a href="https://instagram.com/spinningspoons"><span class="social instagram"></span></a>
+            <a href="http://www.pinterest.com/spinningspoon"><span class="social pinterest"></span></a>
+          </div>
+          <div class="col-sm-6">
+            <%= image_tag 'img_marie.png', width: 150, height: 150, alt: "Marie", class: "center-block" %>
+            <h3 class="text-center"><strong>MARIE</strong><br />
+              <em>the engineer</em>
+            </h3>
+            <p>
+              Nutella every single day? Yes, please! Marie's probably the biggest Nutella eater in town. She's been having
+              it for breakfast &mdash; and sometimes lunch and dinner &mdash; for the past 20 years. Its chocolatey
+              goodness sustained her through a transcontinental move, a CS Master's degree, and countless late night
+              hack sessions.
+            </p>
+            <a href="https://twitter.com/marielucas"><span class="social twitter"></span></a>
+            <a href="http://www.linkedin.com/in/ria093"><span class="social linkedin"></span></a>
+            <a href="https://github.com/ria093"><span class="social github"></span></a>
+            <a href="http://marielucas.com"><span class="social portfolio"></span></a>
+            <a href="https://instagram.com/marielucas"><span class="social instagram"></span></a>
+            <a href="http://www.pinterest.com/marielucas"><span class="social pinterest"></span></a>
+          </div>
+        </div>
+      <% end %>
+      <%= half_img_block('img-04') %>
+
+
+      <%= content_block('img-anchor-05', '#img-anchor-06') do %>
+        <div class="row">
+          <div class="col-sm-6">
+            <%= image_tag 'img_stack.png', width: 300, height: 300, alt: "Stack", class: "" %>
+          </div>
+          <div class="col-sm-6">
+            <h1>How do we stack up?</h1>
+            <p>
+              Just like hazelnuts and chocolate create the perfect spread, we used great ingredients to create a pretty
+              awesome site.
+            </p>
+            <p>
+              We painstakingly set up food photoshoots, created a visual design concept and branding, and implemented the
+              site with twitter bootstrap, SCSS, and CSS3.
+            </p>
+            <p>
+              The site is built with Ruby on Rails and jQuery, and deployed to Heroku. We also used APIs from Yelp and Yummly
+              to make your search more effective!
+            </p>
+          </div>
+        </div>
+      <% end %>
+      <%= half_img_block('img-05') %>
+
+
+      <%= content_block('img-anchor-06', '#img-anchor-01', 'up-arrow-alt') do %>
+        <div class="panel text-center row">
+          <h1>While building this site:</h1>
+          <%= stat_block('icon_ratio.png', '3:1', 'coding to eating<br />ratio') %>
+          <%= stat_block('icon_nutella.png', '691K', 'jars of nutella<br />bought worldwide') %>
+          <%= stat_block('icon_code.png', '4,845', 'lines of code <br />committed') %>
+          <%= stat_block('icon_glass.png', '1', 'perfected old<br />fashioned recipe') %>
+        </div>
+      <% end %>
     </div>
-    <%= next_section('#img-anchor-02') %>
   </div>
-
-  <%= content_block('img-anchor-02', '#img-anchor-03') do %>
-    <div class="row">
-      <div class="col-md-4">
-        <%= image_tag 'img_nutella.png', width: 250, height: 250, :alt => "Nutella Jars", :class => "content-img" %>
-      </div>
-      <div class="col-md-8">
-        <h1>Nom Nom Nom!</h1>
-        <div class = "col-md-10 col-md-offset-2 hidden-sm hidden-md hidden-lg">
-          <%= image_tag 'img_nutella.png', width: 250, height: 250, :alt => "Nutella Jars", :class => "content-img" %>
-        </div>
-        <p>
-          Just in case you’ve been living under a rock, we want you to know: Nutella is
-          awesome! Not convinced by our sheer excitement? Here are some fun facts
-          about Nutella:
-        </p>
-        <ul>
-          <%= list_item() do %>One jar of Nutella is sold every 2.5 seconds in over 75 countries.<% end %>
-          <%= list_item() do %>You could circle the world 1.4 times with the amount of Nutella sold in a year.<% end %>
-          <%= list_item() do %>The name 'Nutella' came about as a result of combining the English word 'nut' and the Latin suffix for sweet &mdash; 'ella.'<% end %>
-        </ul>
-      </div>
-    </div>
-  <% end %>
-  <%= half_img_block('img-02') %>
-
-  <%= content_block('img-anchor-03', '#img-anchor-04') do %>
-    <div class = "col-md-6 col-md-offset-2 vcenter ">
-      <div class = "col-md-10 col-md-offset-2">
-      <h1>We heart food &amp; code</h1>
-      <div class = "col-md-10 col-md-offset-2 hidden-sm hidden-md hidden-lg">
-        <%= image_tag 'img_bourbon.png', width: 250, height: 250, :alt => "Bourbon and Code", :class => "content-img" %>
-      </div>
-      <p>
-        Now that you know how great Nutella is, you get our dilemma: we needed to find more ways to consume Nutella.
-        We thought other people might appreciate a solution as well.
-      </p>
-      </div>
-    </div>
-    <div class = "col-md-4 text-right vcenter hidden-xs">
-      <div class = "col-md-10">
-      <%= image_tag 'img_bourbon.png', width: 250, height: 250, :alt => "Bourbon and Code", :class => "content-img" %>
-      </div>
-    </div>
-  <% end %>
-  <%= half_img_block('img-03') %>
-
-
-  <%= content_block('img-anchor-04', '#img-anchor-05') do %>
-    <div class = "col-md-12 text-center">
-      <h1>So who are we?</h1>
-      <div class = "col-md-6 col-text">
-        <div class = "col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-          <%= image_tag 'img_michelle.png', width: 150, height: 150, :alt => "Michelle", :class => "content-img" %>
-          <h3><strong>MICHELLE</strong><br /><em>the UX designer</em></h3>
-          <p>
-            Michelle can’t seem to stop mixing food and code. She started designing and developing websites for urban farms back in college and hasn’t looked back. When she’s not doing UX and visual design, you’ll find her taking overly artistic photos of basic food items.
-          </p>
-          <%= link_to 'https://twitter.com/SpinningSpoons', target: "_blank" do %>
-            <div class = "social twitter"></div>
-          <% end %>
-          <%= link_to 'http://www.linkedin.com/in/venetucci', target: "_blank" do %>
-            <div class = "social linkedin"></div>
-          <% end %>
-          <%= link_to 'https://github.com/venetucci', target: "_blank" do %>
-            <div class = "social github"></div>
-          <% end %>
-          <%= link_to 'http://www.anaperitif.com/portfolio/', target: "_blank" do %>
-            <div class = "social portfolio"></div>
-          <% end %>
-          <%= link_to 'https://instagram.com/spinningspoons', target: "_blank" do %>
-            <div class = "social instagram"></div>
-          <% end %>
-          <%= link_to 'http://www.pinterest.com/spinningspoon', target: "_blank" do %>
-            <div class = "social pinterest"></div>
-          <% end %>
-        </div>
-      </div>
-      <div class = "col-md-6 col-md-offset-2 col-text">
-        <div class = "col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-10  col-xs-offset-1">
-          <%= image_tag 'img_marie.png', width: 150, height: 150, :alt => "Marie", :class => "content-img" %>
-          <h3><strong>MARIE</strong><br /><em>the engineer</em></h3>
-          <p>
-            Nutella every single day? Yes, please! Marie's probably the biggest Nutella eater in town. She's been having it for breakfast &mdash; and sometimes lunch and dinner &mdash; for the past 20 years. Its chocolatey goodness sustained her through a transcontinental move, a CS Master's degree, and countless late night hack sessions.
-          </p>
-          <%= link_to 'https://twitter.com/marielucas', target: "_blank" do %>
-            <div class = "social twitter"></div>
-          <% end %>
-          <%= link_to 'http://www.linkedin.com/in/ria093', target: "_blank" do %>
-            <div class = "social linkedin"></div>
-          <% end %>
-          <%= link_to 'https://github.com/ria093', target: "_blank" do %>
-            <div class = "social github"></div>
-          <% end %>
-          <%= link_to 'http://marielucas.com', target: "_blank" do %>
-            <div class = "social portfolio"></div>
-          <% end %>
-          <%= link_to 'https://instagram.com/marielucas', target: "_blank" do %>
-            <div class = "social instagram"></div>
-          <% end %>
-          <%= link_to 'http://www.pinterest.com/marielucas', target: "_blank" do %>
-            <div class = "social pinterest"></div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-  <%= half_img_block('img-04') %>
-
-
-  <%= content_block('img-anchor-05', '#img-anchor-06') do %>
-      <div class = "col-md-4 text-left vcenter hidden-xs">
-      <div class = "col-md-10 col-md-offset-2">
-        <%= image_tag 'img_stack.png', width: 300, height: 300, :alt => "Nutella Jars", :class => "content-img" %>
-      </div>
-    </div>
-    <div class = "col-md-6 col-md-offset-2 vcenter">
-      <div class = "col-md-10">
-      <h1>How do we stack up?</h1>
-      <div class = "col-md-10 col-md-offset-2 hidden-sm hidden-md hidden-lg">
-        <%= image_tag 'img_stack.png', width: 300, height: 300, :alt => "Nutella Jars", :class => "content-img" %>
-      </div>
-      <p>Just like hazelnuts and chocolate create the perfect spread, we used great ingredients to create a pretty awesome site.</p>
-      <p>We painstakingly set up food photoshoots, created a visual design concept and branding, and implemented the site with twitter bootstrap, SCSS, and CSS3.</p>
-      <p>The site is built with Ruby on Rails and jQuery, and deployed to Heroku. We also used APIs from Yelp and Yummly to make your search more effective!</p>
-      </div>
-    </div>
-  <% end %>
-  <%= half_img_block('img-05') %>
-
-
-  <%= content_block('img-anchor-06', '#img-anchor-01', 'up-arrow-alt') do %>
-    <div class = "col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 panel text-center clearfix">
-      <h1>While building this site:</h1>
-      <%= stat_block('icon_ratio.png', '3:1', 'coding to eating<br />ratio') %>
-      <%= stat_block('icon_nutella.png', '691K', 'jars of nutella<br />bought worldwide') %>
-      <%= stat_block('icon_code.png', '4,845', 'lines of code <br />committed') %>
-      <%= stat_block('icon_glass.png', '1', 'perfected old<br />fashioned recipe') %>
-    </div>
-  <% end %>
-
-<!-- </div> do not close div so footer is inside "skrollr-body"-->
+</div>
