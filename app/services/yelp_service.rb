@@ -51,7 +51,7 @@ class YelpService
       if exception.is_a?(Yelp::Error::UnavailableForLocation)
         new(nil, Error.new(1, 'The location you entered is not valid.'))
       else
-        new(nil, Error.new(0, 'Oh no! Looks like something went wrong.'))
+        new(nil, Error.new(0, 'Please try again later.'))
       end
     end
 

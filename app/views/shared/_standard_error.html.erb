@@ -1,5 +1,5 @@
 <% flash.each do |name, msg| %>
   <div class = "alert alert-<%= name == :notice ? 'success' : 'warning' %> text-center" role = "alert">
-    Oh no! Looks like something went wrong.<br /><%= msg %>
+    Oh no! It looks like something went wrong.<br /><%= msg %>
   </div>
 <% end %>
