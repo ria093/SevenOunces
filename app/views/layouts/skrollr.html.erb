@@ -12,21 +12,18 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-  <% unless override.present? %>
-     <div class = "wrapper">
-  <% end %>
-  <%= override == 'home' ? nil : (render :partial => "shared/nav") %>
+
+<div id="skrollr-body">
+  <%= render 'shared/nav' %>
+
   <div class="container">
     <%= yield %>
   </div>
-  <% unless override.present? %>
-      <div class="push"></div>
-    </div>
-  <% end %>
-  <%= render('shared/footer') unless override.in?(%w[home about]) %>
 
-  <%= javascript_include_tag 'application' %>
-  <%= render 'shared/analytics' %>
+
+</div>
+<!--<%= render 'shared/footer' %>-->
+<%= javascript_include_tag 'application' %>
+<%= render 'shared/analytics' %>
 </body>
 </html>
-  
