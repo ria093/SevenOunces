@@ -32,7 +32,10 @@ module AboutHelper
 
   def content_block(content_id, anchor_id, style = 'down-arrow-alt')
     content_tag(:div, class: 'content-bar', id: content_id) do
-      (yield if block_given?) + next_section(anchor_id, style)
+      content_tag(:div) do
+        yield if block_given?
+      end +
+      next_section(anchor_id, style)
     end
   end
 
