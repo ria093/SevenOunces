@@ -70,7 +70,7 @@ html, body {
   }
 
   .content-img{
-    margin: 10px 30px;
+    margin-bottom: 10px;
   }
 
   h1, h2, h3, h4 {
@@ -96,15 +96,6 @@ html, body {
 
   .panel {
     padding: 50px 0;
-  }
-
-  .col-text {
-    padding:0;
-    margin: 0;
-
-    p {
-      text-align: justify;
-    }
   }
 
   .vcenter {
@@ -265,10 +256,6 @@ $social-media: linkedin github pinterest twitter instagram portfolio;
 
   #skrollr-body .stat-container {
     padding-bottom: 50px;
-    
-    .content-img {
-      margin-bottom: 0;
-    }    
   }
 
 }
