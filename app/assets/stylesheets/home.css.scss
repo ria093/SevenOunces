@@ -247,3 +247,56 @@ $social-media: linkedin github pinterest twitter instagram portfolio;
     background: image-url('icon_#{$item}.png') no-repeat;
   }
 }
+
+
+/*** MEDIA QUERIES ***/
+
+@media (max-width: 992px) {
+
+  a .social {
+    margin-bottom: 20px;
+  }
+
+  #skrollr-body .stat-container {
+    padding-bottom: 50px;
+    
+    .content-img {
+      margin-bottom: 0;
+    }    
+  }
+
+}
+
+@media (max-width: 768px) {
+  
+  #skrollr-body {
+
+    .content-img {
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .vcenter {
+
+      display: block;
+      text-align: center;
+
+      p {
+        text-align: justify;
+        padding: 0 20px;
+      }
+
+      li {
+        text-align: justify;
+        padding-right: 20px;
+      }
+
+    }
+    
+  }
+
+}

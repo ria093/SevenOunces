@@ -518,6 +518,12 @@ $orientations: left right top bottom;
 
 }
 
+@media (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 1203px) {
 
   h1.home-title {
@@ -543,7 +549,7 @@ $orientations: left right top bottom;
 
 }
 
-@media (min-width: 768px) and (max-width: 992px ) {
+@media (min-width: 768px) and (max-width: 992px) {
 
   .btn-api {
     float: left;
@@ -625,7 +631,6 @@ $orientations: left right top bottom;
       text-align: left;
       position: static;
     }
-
   }
 
 }
@@ -650,6 +655,10 @@ $orientations: left right top bottom;
 
   h1 {
     font-size: 2.3em;
+  }
+
+  .jumbotron {
+    font-size: 0.7em;
   }
 
   h1.home-title {

@@ -50,7 +50,7 @@ module AboutHelper
   end
 
   def stat_block(img, title, text)
-    content_tag(:div, class: 'col-md-3') do
+    content_tag(:div, class: 'col-md-3 col-sm-6 stat-container') do
       image_tag(img, height: 50, alt: img, class: 'content-img') +
       content_tag(:p, title, class: 'big-numb') + 
       content_tag(:p, text.html_safe)

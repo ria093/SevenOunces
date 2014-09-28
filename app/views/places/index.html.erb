@@ -49,7 +49,7 @@
               <% end %>
               <br />
               <%= place.address['address'].join(", ") %><br />
-              <%= "#{place.address['city']}, #{place.address['state']} #{place.address['postal_code']}" %><br />
+              <%= "#{place.address['city']}, #{place.address['state_code']} #{place.address['postal_code']}" %><br />
               <% if place.phone %>
                 <%= place.phone.gsub('-','.') %>
               <% end %>
