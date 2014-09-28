@@ -25,7 +25,7 @@
 }
 
 .home-bckgd {
-  background: image-url("home_bckgd.png") no-repeat center center fixed;
+  background: image-url("home_bckgd.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -182,7 +182,7 @@
 $img-numbs: 1 2 3 4 5;
 @each $item in $img-numbs {
   #img-0#{$item} {
-    background-image: image-url('about_bckgd_0#{$item}.png');
+    background-image: image-url('about_bckgd_0#{$item}.jpg');
   }
 }
 

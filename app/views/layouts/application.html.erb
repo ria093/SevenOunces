@@ -12,12 +12,12 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-  <% unless override == 'about' %>
+  <% unless override.present? %>
      <div class = "wrapper">
   <% end %>
   <%= override == 'home' ? nil : (render :partial => "shared/nav") %>
   <%= yield %>
-  <% unless override == 'about' %>
+  <% unless override.present? %>
       <div class="push"></div>
     </div>
   <% end %>
@@ -26,3 +26,4 @@
   <%= render "layouts/analytics" %>
 </body>
 </html>
+  
