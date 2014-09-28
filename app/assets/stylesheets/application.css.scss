@@ -41,13 +41,14 @@ $neutral-extra-light: #eeeeee;
 }
 
 .logo-sm {
-  margin-top: 12px;
   width: 150px;
+  position: relative;
+  top: 0px;
 }
 
 .navbar {
   background: $primary-color;
-  min-height: 55px;
+  min-height: 69px;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -372,11 +373,13 @@ body {
 .masonry-outer-container {
   -moz-column-width: 22em;
   -webkit-column-width: 22em;
-  -moz-column-gap: 0.1em;
-  -webkit-column-gap: 0.1em;
+  column-width: 22em;
+  -moz-column-gap: 30px;
+  -webkit-column-gap: 30px;
+  column-gap: 30px;
 }
 
-.masonry-outer-container > .col-md-4 {
+.masonry-outer-container > .api-result {
   display: inline-block;
   float: none;
   margin: 0;
@@ -590,17 +593,11 @@ $orientations: left right top bottom;
     background-position: 27%;
   }
 
-  .logo-sm {
-    width: 150px;
-    display: block;
-    margin: 10px auto;
-  }
-
   .navbar-toggle {
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    float:none;
+    float: right;
+    margin-top: 17px;
   }
 
   .special_input {

@@ -23,7 +23,9 @@ Search nearby locations that serve Nutella or find a great recipe you can make a
      <div class = "wrapper">
   <% end %>
   <%= override == 'home' ? nil : (render :partial => "shared/nav") %>
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
   <% unless override.present? %>
       <div class="push"></div>
     </div>

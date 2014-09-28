@@ -1,7 +1,5 @@
-<div class = "col-md-10 col-md-offset-1 clearfix">
-  <div class = "col-md-12">
-    <h1>I'm Feeling Motivated</h1>
-  </div>
+<h1>I'm Feeling Motivated</h1>
+<div class="row">
   <div class = "col-md-7 buffer-bottom">
     <h4>
       Lucky you, you're on your way to your Nutella fix. Here are some great recipes we found for you. Get to it!
@@ -13,11 +11,12 @@
   </div>
 </div>
 
+
 <div><!-- Magic div. Do not touch. -->
-  <div class = "col-md-10 col-md-offset-1 api-results">
+  <div class = "api-results">
     <div class = "masonry-outer-container">
       <% @results.each do |result| %>
-        <div class = "col-md-4 api-result">
+        <div class = "api-result">
           <div class = "col-md-12 results-box">
             <div class = "results-image-container yummly-image-container">
               <%= link_to result.yummly_url, target: "_blank" do %>
@@ -42,4 +41,5 @@
       <% end %>
     </div>
   </div>
+</div>
 </div>
