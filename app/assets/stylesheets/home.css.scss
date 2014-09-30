@@ -193,7 +193,7 @@ $img-numbs: 1 2 3 4 5;
 
 /*** ARROW STYLES ***/
 
-.down-arrow, .down-arrow-alt, .up-arrow, .up-arrow-alt {
+.down-arrow, .down-arrow-alt, .up-arrow, .up-arrow-alt, .home-about {
   cursor: pointer;
   margin: 0 auto;
   height: 40px;
@@ -204,6 +204,10 @@ $img-numbs: 1 2 3 4 5;
   bottom: 15px;
   left: 40%;
   right: 40%;
+}
+
+.home-about a {
+  color: white;
 }
 
 .down-arrow {
@@ -270,6 +274,8 @@ $social-media: linkedin github pinterest twitter instagram portfolio;
 
     .content-img {
       margin-bottom: 30px;
+      height: 125px;
+      width: 125px;
     }
 
     h1 {
@@ -280,6 +286,8 @@ $social-media: linkedin github pinterest twitter instagram portfolio;
 
     .jumbotron h1 {
       text-align: left;
+      font-size: 3.1em;
+      margin-top: 65px;
     }
 
     .vcenter {

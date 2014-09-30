@@ -9,9 +9,7 @@ Search nearby locations that serve Nutella or find a great recipe you can make a
 
 Search for recipes using the Yummly API: 
 
-![Search the Yummly API for Nutella recipes](https://raw.githubusercontent.com/ria093/SevenOunces/master/public/screenshots/recipe-page.png)
-
-![footer](https://raw.githubusercontent.com/ria093/SevenOunces/master/public/screenshots/footer.png)
+![Search the Yummly API for Nutella recipes](https://raw.githubusercontent.com/ria093/SevenOunces/master/public/screenshots/motivated.png)
 
 Search for nearby restaurants that serve Nutella dishes with the Yelp API: 
 

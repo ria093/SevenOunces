@@ -163,13 +163,18 @@ body {
 }
 
 
-/*** BUTTON STYLES ***/
+/*** BUTTON AND LINK STYLES ***/
+
+a, a:visited, a:hover, a:active, a:focus, {
+  color: $neutral-light;
+}
 
 .btn {
-  color: white;
+  color: white !important;
   font-size: 1.4em;
   margin: 0 15px 20px 15px;
   padding: 10px 25px;
+  opacity: 1;
 }
 
 .btn:hover {
@@ -410,6 +415,10 @@ body {
   color: $neutral-dark;
 }
 
+#home-footer {
+  opacity: 0;
+}
+
 .push {
   height: 300px;
   width:100%;
@@ -420,7 +429,6 @@ body {
   height: auto !important;
   margin: 0 auto -300px;
 }
-
 
 /*** LIST STYLES ***/
 
@@ -464,6 +472,21 @@ a:focus {
   padding-left: 8px;
 }
 
+.social-links .fa {
+  font-size: 1.3em !important;
+  height: 30px;
+  width: 30px;
+  line-height: 30px !important;
+  border-radius: 15px;
+  background-color: #c4c4c4;
+  color: #eeeeee;
+  margin: 2px 2px 20px;
+}
+
+.fa:hover {
+  background-color: #ea6c5d;
+}
+
 h1 {
   font-weight: 900;
   font-size: 3em;
@@ -505,6 +528,13 @@ $orientations: left right top bottom;
   }
 }
 
+$orientations: left right top bottom;
+@each $item in $orientations {
+  .buffer-lg-#{$item} {
+    margin-#{$item}: 50px;
+  }
+}
+
 .pull-center {
   text-align: center;
 }
@@ -512,7 +542,6 @@ $orientations: left right top bottom;
 .text-justified {
     text-align: justify;
 }
-
 
 /*** MEDIA QUERIES ***/
 
@@ -656,6 +685,10 @@ $orientations: left right top bottom;
     font-size: 0.7em;
   }
 
+  .jumbotron h3 {
+    font-weight: 400;
+  }
+
   h1.home-title {
     font-size: 2.1em;
     line-height: 1.2em;
@@ -667,6 +700,10 @@ $orientations: left right top bottom;
     min-width: 10px;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .panel {
+    min-width: 100%;
   }
 
   .panel-body {
@@ -694,6 +731,10 @@ $orientations: left right top bottom;
       margin: 0 0 10px 0;
       width: 100%;
     }
+  }
+
+  ul {
+    padding-left: 0;
   }
 
 }
