@@ -165,8 +165,12 @@ body {
 
 /*** BUTTON AND LINK STYLES ***/
 
-a, a:visited, a:hover, a:active, a:focus, {
+a, a:visited, a:hover, a:active {
   color: $neutral-light;
+}
+
+a:focus {
+  outline: none;
 }
 
 .btn {
@@ -456,10 +460,6 @@ ul li .content {
 
 /*** GENERAL STYLES ***/
 
-a:focus {
-  outline: none;
-}
-
 .center {
   float: none;
   margin-left: auto;
@@ -681,14 +681,6 @@ $orientations: left right top bottom;
     font-size: 2.3em;
   }
 
-  .jumbotron {
-    font-size: 0.7em;
-  }
-
-  .jumbotron h3 {
-    font-weight: 400;
-  }
-
   h1.home-title {
     font-size: 2.1em;
     line-height: 1.2em;
@@ -700,6 +692,14 @@ $orientations: left right top bottom;
     min-width: 10px;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .jumbotron {
+    font-size: 0.7em;
+  }
+
+  .jumbotron h3 {
+    font-weight: 400;
   }
 
   .panel {
