@@ -3,7 +3,7 @@
 <html class = <%= override == 'home' ? 'home-bckgd' : '' %>>
 <head>
   <title>SevenOunces</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
   <%= render 'shared/open_graph' %>
@@ -12,21 +12,18 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-  <% unless override.present? %>
-     <div class = "wrapper">
-  <% end %>
-  <%= override == 'home' ? nil : (render :partial => "shared/nav") %>
-  <div class="container">
-    <%= yield %>
-  </div>
-  <% unless override.present? %>
-      <div class="push"></div>
-    </div>
-  <% end %>
-  <%= render('shared/footer') unless override.in?(%w[home about]) %>
 
+  <% if override == 'home' %>
+    <%= render "layouts/home" %>
+  <% elsif override == 'about' %>
+    <%= render "layouts/about" %>
+  <% else %>
+    <%= render 'layouts/main' %>
+  <% end %>
+  
   <%= javascript_include_tag 'application' %>
   <%= render 'shared/analytics' %>
+  
 </body>
 </html>
   

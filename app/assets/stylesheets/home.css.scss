@@ -39,26 +39,22 @@
   margin-bottom: 10px;
 }
 
-html, body {
-  height:100%;
-}
 
 /*** ABOUT PAGE STYLES ***/
 
-.skrollr body {
+.skrollr-desktop body {
   height: 100% !important;
-}
-
-#skrollr-body {
-  .container, .row, .col-md-10 {
-    height: 100%;
-  }
 }
 
 #skrollr-body {
   height: 100%;
   overflow: visible;
   position: relative;
+
+  .row {
+    padding:0;
+    margin: 0;
+  }
 
   .content-bar {
     padding-top: 60px;
@@ -70,7 +66,7 @@ html, body {
   }
 
   .content-img{
-    margin-bottom: 10px;
+    margin: 10px 30px;
   }
 
   h1, h2, h3, h4 {
@@ -85,8 +81,8 @@ html, body {
   }
 
   .jumbotron {
-    background-color: transparent;
-    padding: 200px 0 0;
+    background: none;
+    margin-bottom: 0px;
 
     h1, h2, h3, h4 {
       text-transform: none;
@@ -96,6 +92,11 @@ html, body {
 
   .panel {
     padding: 50px 0;
+  }
+
+  .col-text {
+    padding:0;
+    margin: 0;
   }
 
   .vcenter {
@@ -155,7 +156,6 @@ html, body {
 }
 
 .gap {
-  position: relative;
   background: transparent center no-repeat;
   background-size: cover;
 }
@@ -256,6 +256,10 @@ $social-media: linkedin github pinterest twitter instagram portfolio;
 
   #skrollr-body .stat-container {
     padding-bottom: 50px;
+    
+    .content-img {
+      margin-bottom: 0;
+    }    
   }
 
 }
@@ -271,23 +275,16 @@ $social-media: linkedin github pinterest twitter instagram portfolio;
     h1 {
       padding: 0;
       margin: 20px 0;
+      text-align:center;
+    }
+
+    .jumbotron h1 {
+      text-align: left;
     }
 
     .vcenter {
-
-      display: block;
-      text-align: center;
-
-      p {
-        text-align: justify;
-        padding: 0 20px;
-      }
-
-      li {
-        text-align: justify;
-        padding-right: 20px;
-      }
-
+      display: inline-block;
+      text-align: justify;
     }
     
   }
