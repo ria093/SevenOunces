@@ -262,7 +262,7 @@ $social-media: linkedin github pinterest twitter instagram portfolio;
     padding-bottom: 50px;
     
     .content-img {
-      margin-bottom: 0;
+      margin: 10px 10px 0;
     }    
   }
 
@@ -287,10 +287,6 @@ $social-media: linkedin github pinterest twitter instagram portfolio;
     .vcenter {
       display: inline-block;
       text-align: justify;
-    }
-
-    .content-img {
-      margin: 10px 10px;
     }
     
   }
