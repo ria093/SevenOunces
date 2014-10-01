@@ -9,17 +9,17 @@ $(document).ready(function(){
     showRecipes();
 
     $(".page-reloader").click( function() {
-        $.get("/external_recipes", function(data) {
+        $.get("/recipes", function(data) {
             var results;
 
             // Clear out old recipes
             $('.api-results').empty();
 
-            console.log(data);
+
 
             // Add new recipes to results list with animations.
             results = $('.api-results .api-result', data);
-            console.log(results);
+
             $('.api-results').append(results);
             showRecipes();
 
