@@ -11,7 +11,10 @@
   </div>
 </div>
 
-
+<% if @results.error.present? %>
+  <% flash.now[:notice] = @results.error.msg %>
+  <%= render :partial => "shared/standard_error" %>
+<% else %>
 <div><!-- Magic div. Do not touch. -->
   <div class = "api-results">
     <div class = "masonry-outer-container">
@@ -42,4 +45,4 @@
     </div>
   </div>
 </div>
-</div>
+<% end %>
