@@ -3,22 +3,22 @@
   <%= image_tag("logo_seven_ounces.png", :alt => "logo", :class => "logo-lg") %>
 </div>
 <div class="row">
-  <div class = "col-md-6 text-center home-panel">
-    <div class = "panel panel-default buffer-right buffer-left">
+  <div class = "col-md-6 text-center">
+    <div class = "panel panel-home buffer-right buffer-left">
       <div class = "panel-body">
-        <h1 class="home-title">I'm Feeling Lazy</h1>
-        <div class="panel-text">
+        <h1 class= "home-title">I'm Feeling Lazy</h1>
+        <div class= "panel-text">
           I just need someone to make me something with Nutella. Find restaurants that serve Nutella in my area.
         </div>
         <%= render :partial => "shared/places_form" %>
       </div>
     </div>
   </div>
-  <div class = "col-md-6 text-center home-panel">
-    <div class = "panel panel-default buffer-left buffer-right">
+  <div class = "col-md-6 text-center">
+    <div class = "panel panel-home buffer-left buffer-right">
       <div class = "panel-body">
-        <h1 class="home-title">I'm Feeling Motivated</h1>
-        <div class="panel-text">
+        <h1 class= "home-title">I'm Feeling Motivated</h1>
+        <div class= "panel-text">
           I just got one of those big Nutella jars. Now I just need a great recipe. Find something to make with Nutella.
         </div>
           <%= link_to "Let's make something", external_recipes_path,  class: 'btn btn-primary' %>

@@ -169,6 +169,7 @@ body {
 
 a, a:visited, a:hover, a:active {
   color: $neutral-light;
+  text-decoration: none;
 }
 
 a:focus {
@@ -251,12 +252,12 @@ a:focus {
 
 .panel {
   padding: 25px 15px;
-  min-height: 300px;
-  min-width: 330px;
 }
 
-.panel-default {
-  opacity: 0.8;
+.panel-home {
+  opacity: 0;
+  min-height: 300px;
+  min-width: 330px;
 }
 
 .panel-text {
@@ -506,6 +507,12 @@ ul li .content {
   padding-left: 8px;
 }
 
+.round-img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
 .social-links .fa {
   font-size: 1.3em !important;
   height: 30px;
@@ -720,7 +727,7 @@ $orientations: left right top bottom;
     line-height: 1.2em;
   }
 
-  .home-panel .panel {
+  .panel-home {
     padding: 10px 15px;
     min-height: 10px;
     min-width: 10px;
@@ -737,7 +744,7 @@ $orientations: left right top bottom;
   }
 
   .panel {
-    min-width: 100%;
+   // min-width: 100%;
   }
 
   .panel-body {

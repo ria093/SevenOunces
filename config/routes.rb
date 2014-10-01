@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
-  get 'home/about' #, as: 'about'
+  get 'home/about', :path => "about"
   get 'home/test'
   resources :places, only: :index
-  resources :external_recipes, only: :index
+  resources :external_recipes, :path => "recipes", only: :index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

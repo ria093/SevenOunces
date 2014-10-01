@@ -4,8 +4,8 @@ $(document).ready(function(){
     opacity: 1
   }, 900);
 
-  $( ".home-panel" ).delay( 400 ).animate({
-    opacity: 1
+  $( ".panel-home" ).delay( 400 ).animate({
+    opacity: 0.8
   }, 900);
 
   $( "#home-footer" ).delay( 400 ).animate({
