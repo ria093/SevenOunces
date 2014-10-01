@@ -15,8 +15,11 @@ $(document).ready(function(){
             // Clear out old recipes
             $('.api-results').empty();
 
+            console.log(data);
+
             // Add new recipes to results list with animations.
-            results = $('.api-results .col-md-4', data);
+            results = $('.api-results .api-result', data);
+            console.log(results);
             $('.api-results').append(results);
             showRecipes();
 

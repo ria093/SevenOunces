@@ -268,6 +268,7 @@ a:focus {
 .api-result {
   top: 50px;
   opacity: 0;
+  position: relative;
 }
 
 .results-box {
@@ -372,6 +373,37 @@ a:focus {
   .special_alert {
     bottom: 0;
   }
+}
+
+/*** ALERT STYLE ***/
+
+.alert {
+  padding: 20px;
+}
+
+.alert-danger {
+  background-color: #FAE3E0;
+  border-color: #FFD0CA;
+  color: #ea6c5d;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.alert-danger .fa {
+  font-size: 2.7em;
+  color: #ea6c5d;
+  float: left;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+.alert-text {
+  margin-left: 70px;
+}
+
+.alert-text-container {
+  margin: 0 10%;
 }
 
 
@@ -483,7 +515,7 @@ ul li .content {
   margin: 2px 2px 20px;
 }
 
-.fa:hover {
+.social-links .fa:hover {
   background-color: #ea6c5d;
 }
 

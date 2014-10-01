@@ -227,36 +227,9 @@ $img-numbs: 1 2 3 4 5;
 }
 
 
-/*** SOCIAL ICONS ***/
-
-a .social {
-  margin: 2px;
-  height: 30px;
-  width: 30px;
-  overflow: hidden;
-  background-position: 0 0;
-  display: inline-block;
-}
-
-a .social:hover {
-  background-position: 0 -30px;
-}
-
-$social-media: linkedin github pinterest twitter instagram portfolio;
-@each $item in $social-media {
-  .#{$item} {
-    background: image-url('icon_#{$item}.png') no-repeat;
-  }
-}
-
-
 /*** MEDIA QUERIES ***/
 
 @media (max-width: 992px) {
-
-  a .social {
-    margin-bottom: 20px;
-  }
 
   #skrollr-body .stat-container {
     padding-bottom: 50px;

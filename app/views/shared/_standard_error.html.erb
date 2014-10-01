@@ -1,7 +1,15 @@
 <% flash.each do |name, msg| %>
-  <div class="alert alert-<%= name == :notice ? 'success' : 'danger' %> alert-dismissible text-center" role="alert">
-    <i class = "fa fa-warning"></i>
-    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    Oh no! It looks like something went wrong.<br /><%= msg %>
+<div class="col-md-12">
+  <div class="row alert alert-<%= name == :notice ? 'success' : 'danger' %> text-center" role="alert">
+      <!--<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+      <div class="col-md-6 col-md-offset-3">
+        <div class="alert-text-container">
+        <i class = "fa fa-warning"></i>
+        <div class="alert-text">
+          Oh no! It looks like something went wrong.<br /><%= msg %>
+        </div>
+        </div>
+      </div>
   </div>
+</div>
 <% end %>

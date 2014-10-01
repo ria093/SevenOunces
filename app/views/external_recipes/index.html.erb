@@ -16,8 +16,7 @@
   <%= render :partial => "shared/standard_error" %>
 <% else %>
 <div><!-- Magic div. Do not touch. -->
-  <div class = "api-results">
-    <div class = "masonry-outer-container">
+  <div class = "api-results masonry-outer-container">
       <% @results.each do |result| %>
         <div class = "api-result">
           <div class = "col-md-12 results-box">
@@ -42,7 +41,6 @@
           </div>
         </div>
       <% end %>
-    </div>
   </div>
 </div>
 <% end %>
