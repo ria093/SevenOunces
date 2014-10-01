@@ -35,6 +35,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 # Server monitoring
 gem 'newrelic_rpm', '~> 3.9.4'
 
+# Font Awesome for icons
+gem 'font-awesome-sass', '~> 4.2.0'
+
 group :development do
   # sqlite3 for ActiveRecord
   gem 'sqlite3', '~> 1.3.9'
