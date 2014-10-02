@@ -64,7 +64,7 @@ class YelpService
         limit: 20, # Max number of results returned
         offset: 0, # Offset the list of returned results
         sort: 0, # Sort by highest-rated
-        radius_filter: 1600 # Search radius set to 1 mile
+        radius_filter: 4800 # Search radius set to 3 miles (1600 = 1 mile)
       }
     end
 

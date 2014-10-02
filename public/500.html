@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="favicon.ico" rel="icon" type="image/x-icon" />
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
+  <head>
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+    <title>We're sorry, but something went wrong (500)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
 
-    .btn {
+      body {
+        background-color: #ffffff;
+        color: #646464;
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+      }
+
+      .btn {
       color: white !important;
       font-size: 1.3em;
       margin: 0;
@@ -18,26 +26,19 @@
       cursor: pointer;
       line-height: 1.428571429;
       border-radius: 4px;
-    }
+      }
 
-    .btn-primary {
+      .btn-primary {
       background-color: #ea6c5d;
       border-color: #ea6c5d;
       font-weight: 400;
-    }
+      }
 
-    .btn:hover {
+      .btn:hover {
       opacity: 0.7;
-    }
+      }
 
-    body {
-      background-color: #ffffff;
-      color: #646464;
-      font-family: arial, sans-serif;
-      margin: 0;
-    }
-
-    .container {
+      .container {
       width: 1170px;
       margin-right: auto;
       margin-left: auto;
@@ -45,114 +46,116 @@
       padding-right: 15px;
       padding-top: 10%;
       padding-bottom: 40px;
-    }
+      }
 
-    .error-image {
+      .error-image {
       width: 350px;
       display: inline-block;
-    }
+      }
 
-    .error-text {
+      .error-text {
       display: inline-block;
       width: 60%;
       margin-left: 50px;
-    }
+      }
 
-    h1 {
+      h1 {
       font-weight: 900;
       font-size: 3em;
       margin-top: 50px;
       margin-bottom: 20px;
       text-transform: capitalize;
       color: #646464;
-    }
-
-    p {
-      line-height: 1.4em;
-      font-size: 1.3em;
-      color: #646464;
-    }
-
-
-    @media (min-width: 768px) and (max-width: 992px) {
-
-      .container {
-        width: 970px;
-        text-align: center;
-      }
-
-      .error-text {
-        width: 40%;
-        margin-left: 0px;
-      }
-
-
-    }
-
-    @media (max-width: 768px) {
-
-      .container {
-        width: 750px;
-        text-align: center;
-      }
-
-      .error-text {
-        width: 60%;
-        margin-left: 0px;
-      }
-
-
-    }
-
-    @media (max-width: 480px) {
-
-      .btn {
-        font-size: 1em;
-      }
-
-      .container {
-        width: 315px;
-        text-align: center;
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .error-text {
-        width: 80%;
-        margin-left: 0px;
-      }
-
-      .error-image {
-        width: 250px;
-      }
-
-      h1 {
-        margin-top: 10px;
-        font-size: 1.5em;
       }
 
       p {
-        font-size: 1em;
-        margin-bottom: 20px;
+      line-height: 1.4em;
+      font-size: 1.3em;
+      color: #646464;
       }
 
-    }
 
-  </style>
-</head>
+      @media (min-width: 768px) and (max-width: 992px) {
 
-<body>
-<!-- This file lives in public/404.html -->
-<div class="container">
-  <img src="bread-bite-nutella.gif" alt="Mountain View" class="error-image" />
-  <div class="error-text">
-    <h1>Nothing to see here!</h1>
-    <p>We're on a bit of a nutella kick and may have forgotten something. Why don't you search for a recipe
-      and get sugar high with us instead?</p>
-    <a href="http://www.sevenounces.com/recipes">
-      <div class="btn btn-primary">Find nutella recipes!</div>
-    </a>
-  </div>
-</div>
-</body>
+        .container {
+          width: 970px;
+          text-align: center;
+        }
+
+        .error-text {
+          width: 40%;
+          margin-left: 0px;
+        }
+
+
+      }
+
+      @media (max-width: 768px) {
+
+        .container {
+          width: 750px;
+          text-align: center;
+        }
+
+        .error-text {
+          width: 60%;
+          margin-left: 0px;
+        }
+
+
+      }
+
+      @media (max-width: 480px) {
+
+        .btn {
+          font-size: 1em;
+        }
+
+        .container {
+          width: 315px;
+          text-align: center;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .error-text {
+          width: 80%;
+          margin-left: 0px;
+        }
+
+        .error-image {
+          width: 250px;
+        }
+
+        h1 {
+          margin-top: 10px;
+          font-size: 1.5em;
+        }
+
+        p {
+          font-size: 1em;
+          margin-bottom: 20px;
+        }
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- This file lives in public/500.html -->
+    <div class="container">
+      <img src="bread-bite-nutella.gif" alt="Mountain View" class="error-image" />
+        <div class="error-text">
+          <h1>Nothing to see here!</h1>
+          <p>
+            We're on a bit of a Nutella kick and may have forgotten something. 
+            Why don't you search for a recipe and get sugar high with us instead?
+          </p>
+          <a href="http://www.sevenounces.com/recipes">
+            <div class="btn btn-primary">Find Nutella Recipes</div>
+          </a>
+        </div>
+    </div>
+  </body>
 </html>
