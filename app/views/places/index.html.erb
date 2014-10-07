@@ -34,21 +34,18 @@
           <div class = "results-box-content">
             <%= link_to place.url, target: "_blank" do %>
               <h4 class = "results-title">
-                <%= place.name %>
+                <%= place.name %> 
+                <% if place.neighborhood %>
+                  <span style = "font-weight: 300;"><i>&mdash; <%= place.neighborhood %></i></span>
+                <% end %>
               </h4>
             <% end %>
-            <%= image_tag(place.rating_img_url, :alt => "rating", :class => "") %>
-            <% if place.neighborhood %>
-              <div class = "divider-line">|</div>
-              <%= place.neighborhood %>
-            <% end %>
-            <br />
-            <%= place.address['address'].join(", ") %><br />
-            <%= "#{place.address['city']}, #{place.address['state_code']} #{place.address['postal_code']}" %><br />
-            <% if place.phone %>
-              <%= place.phone.gsub('-','.') %>
-            <% end %>
-            <br />
+            <%= image_tag(place.rating_img_url, :alt => "rating", :class => "rating") %><br />
+            <div><%= place.address['address'].join(", ") %></div>
+            <div><%= "#{place.address['city']}, #{place.address['state_code']} #{place.address['postal_code']}" %></div>
+            <!-- <% if place.phone %>
+              <% place.phone.gsub('-','.') %><br />
+            <% end %> -->
           </div>
         </div>
       </div>

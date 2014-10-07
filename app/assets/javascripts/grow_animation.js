@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  $(".results-image").each( function(index, image) {
-    $(image).on('load', function(){
-      $(this).parents('.results-image-container').css('max-height', $(this).height());
-    });
-  });
+  // $(".results-image").each( function(index, image) {
+  //   $(image).on('load', function(){
+  //     $(this).parents('.results-image-container').css('max-height', $(this).height());
+  //   });
+  // });
 
   $(document).on('mouseenter', '.results-image', {}, function() {
     $(this).fadeTo("fast", 0.8);

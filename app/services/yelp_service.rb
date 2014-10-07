@@ -86,7 +86,7 @@ class YelpService
     end
 
     def display_img_url(url)
-      url.sub(/ms.jpg$/, 'l.jpg') 
+      url.present? ? url.sub(/ms.jpg$/, 'l.jpg') : 'not_available.jpg'
     end
 
   end
